@@ -1,0 +1,319 @@
+html {
+  --dark_purple: #050517;
+  --purple: #2E1B3B;
+  --yellow: #F0C808;
+  --greywhite: #d2d2d2;
+  --white: #f7f7f7;
+}
+h2 a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+/* Movie org menu */
+.movie_org {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+/* Movie categorie nav */
+.movie_nav {
+  display: flex;
+  width: 100%;
+  font-size: 1rem; 
+  background-color: var(--dark_purple);
+  box-shadow: 0px 4px 50px rgba(80, 80, 80, 0.25);
+  border-radius: 8px;
+  height: auto;
+}
+.movie_nav a {
+    text-decoration: none;
+    padding: 8px;
+    color: var(--greywhite);
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .movie_nav a:hover {
+    background: var(--purple);
+    outline: 1px solid var(--purple);
+  }
+  .movie_nav ul {
+    padding: 8px 5px;
+    margin: 0px;
+  }
+
+  .movie_nav li, .movie_nav a{
+    display: inline-flex;
+  }
+  
+  .active_movie {
+    background-color: var(--purple);
+    color: var(--white);
+    text-transform: uppercase;
+  }
+  
+  .movie_nav label:nth-child(1), #moviemenu_checkbox {
+    display: none;
+  }
+
+  /* Sory by nav */
+  .sortby {
+    background-image: url(/icons/icon_downarrow.png);
+    background-position: 90%;
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    margin: auto;
+    padding: 0.6rem 68px 0.6rem 7px;
+  }
+
+  .sortby_text {
+    display: flex;
+    width:fit-content;
+    white-space: nowrap;
+    color: var(--dark_purple);
+  }
+  .movie_org input, .sortby_menu li {
+    display: none;
+  }
+  .sortby_menu {
+    position: absolute;
+    top: -10px;
+    right: 2px;
+    z-index: 1;
+  }
+  .sortby_menu a {
+    padding: 8px;
+    text-decoration: none;
+    color: var(--dark_purple);
+    width: 100%;
+  }
+  .sortby_menu ul {
+    background-color: var(--greywhite);
+    border-radius: 5px ;
+    padding: 0px;
+  }
+  .sortby_menu li {
+    width: 100%;
+    border-top: 1px solid var(--dark_purple);
+  }
+  .sortby_menu li:nth-child(1) {
+    display: flex;
+  }
+  .sortby_menu li:hover {
+    background-color: var(--white);
+    border-radius: 0px;
+  }
+  .sortby_menu li:nth-child(1):hover{
+    border-radius: 5px;
+  }
+  .sortby_menu li:nth-child(6):hover{
+    border-radius:0px 0px 5px 5px;
+  }
+  .sortby_menu li:nth-child(1):hover {
+    background-color: var(--greywhite);
+  }
+  #sortby_menu_button:checked ~ .sortby_menu li {
+    display: flex;
+  }
+
+
+  /* Movie cards */
+  .movies {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    flex-direction: row;
+    grid-gap: 20px;    
+    min-height: auto;
+    margin: 20px auto 170px auto;
+    max-width: 1500px;
+  }
+  .movie_card {
+    display: flex;
+  }
+
+  .movie_cover {
+    flex: 1;
+    padding-right: 1rem;
+    border-right: 2px solid var(--purple);
+    object-fit: cover;
+    margin: auto; 
+  }
+  .movie_cover img:hover {
+    outline: 2px solid var(--purple);
+  }
+  .cover_img {
+  display: flex;
+  max-height: 420px;
+  object-fit: cover; 
+  margin: auto;
+  }
+
+  .movie_info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0px 0px 0px 1rem;
+    justify-content: flex-end ;
+  }
+  .movie_info p {
+    margin: 0.4rem 0px;
+  }
+  .movie_info .movie_price {
+    font-size: 1.4rem;
+  }
+  /* buttons and shopping bag */
+  .buttons { 
+    display: flex;
+    gap: 4px;
+  }
+  .buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;  
+    width: fit-content;
+    padding: 0px 4px;
+    text-transform: uppercase;
+    background-color: var(--greywhite);
+    color: var(--dark_purple);
+    margin: 0px 2px;
+  }
+  .shopping_bag_button {
+    gap: 8px; /*sets the gap between "add" and icon */
+  }
+  .buttons a {
+    text-decoration: none;
+    padding: 0.4rem;
+    flex: 1;
+  }
+  .buttons a:hover, .shopping_bag_button:hover {
+    font-weight: 600;
+  }
+  
+
+
+  @media (max-width:1700px) {
+    .movies {
+        grid-template-columns:repeat(2, 1fr);
+      }
+  }
+
+  @media (max-width:1300px) {
+    html {
+      font-size: 14px;
+    }
+    .icons {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .movie_info {
+        font-size: 1rem;
+    }
+  }
+  
+  @media (max-width:1120px) {
+    /* movie card */
+    .buttons label {
+        font-size: 0.8rem;
+      }
+    }
+  @media (max-width:1000px) {
+    /* movie card */
+    .movie_cover {
+      flex: 1;
+    }
+    .movie_info {
+      flex: 2;
+    }
+  }
+  
+
+  @media (max-width:950px) {
+
+    /* Changes the categories menu */
+    .movie_nav li {
+        display: none;
+    }
+    .movie_nav li:nth-child(1), .movie_nav label:nth-child(1) {
+      display: flex;
+    }
+    #moviemenu_checkbox:checked ~ .movie_nav li{
+        display: flex;
+    }
+    #moviemenu_checkbox:checked ~ .categories {
+        background-color: var(--dark_purple);
+    }
+    #moviemenu_checkbox:checked ~ .movie_nav li:nth-child(2) { 
+        display: none;
+      }
+    .movie_nav a, .movie_nav ul {
+        width: 100%;
+    }
+    .categories {
+        background-color: var(--purple);
+        padding: 8px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: fit-content;
+    }
+}
+
+
+
+  @media (max-width:800px) {
+    .movies {
+        grid-template-columns:repeat(1, 1fr);
+    }
+    .movie_descrition, .buttons label {
+        font-size: 1rem;
+    }
+    .movie_info h2 {
+        font-size: 1.4rem;
+    }    
+    .icons {
+      height: 1.8rem;
+    }
+  }
+
+  @media (max-width:500px) {
+      html {
+          font-size: 12px;
+      }
+      h1 {
+        font-size: 1.5rem;
+        height: 1rem;
+        margin: 2%;
+      }
+
+      .movie_nav ul {
+          width: 100%;
+      }
+      .movie_nav a{
+        font-size: 1rem;
+      }
+      .categories {
+          width: 95%;
+          background-color: var(--dark_purple);
+          border: 2px solid var(--purple);
+      }
+
+      /* sortby menu */
+      .sortby_menu {
+        top: -2px;
+        font-size: 0.9rem;
+        width: auto;
+      }
+      .sortby {
+        width: auto;
+      }
+      .icons {
+        height: 2rem;
+      }
+
+      /* movie cards */
+      .movie_cover, .movie_info {
+        flex: 1;
+      }
+  }

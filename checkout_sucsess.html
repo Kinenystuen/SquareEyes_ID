@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="describtion"
+      content="Checkout success page. Enjoy the movie!"
+    />
+    <link rel="stylesheet" href="unicode.css" />
+    <link rel="stylesheet" href="css_code/checkout_success.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="js/index.js"></script>
+    <title>SquareEyes | Checkout success</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          class="logo_header"
+          src="Images/SquareEyes_Logo_org.png"
+          alt="Logo SquareEyes"
+      /></a>
+      <div class="header_left">
+        <input type="checkbox" name="menu_checkbox" id="menu_checkbox" />
+        <label
+          for="menu_checkbox"
+          class="hamburger_icon"
+          aria-label="Navigation menu"
+        ></label>
+        <nav class="nav_left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movie-pages/all-movies.html">Movies</a></li>
+            <li><a href="your_list.html">Your list</a></li>
+            <li><a href="your_fav.html">Favorites</a></li>
+            <li><a href="about_us.html">About us</a></li>
+            <li><a href="contact_us.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header_right">
+        <nav class="nav_right">
+          <input
+            id="menu_search_icon"
+            type="search"
+            placeholder="Search"
+            class="search"
+            aria-labelledby="search_bar"
+          />
+          <label for="menu_search_icon" class="icon_search"
+            ><span id="search_bar" class="gone_text">Search bar</span></label
+          >
+          <a href="your_fav.html" aria-label="Go to your favorites page">
+            <figure class="icon_favorites_nav"></figure>
+          </a>
+          <a href="your_list.html" aria-label="Go to your list page">
+            <figure class="icon_your_list_nav"></figure>
+          </a>
+          <a href="checkout.html" aria-label="Go to shopping bag">
+            <figure class="icon_shopping_bag_nav"></figure>
+          </a>
+          <a href="your_page.html" aria-label="Go to your profile">
+            <figure class="icon_profile_nav"></figure>
+          </a>
+        </nav>
+      </div>
+      <div class="search_bar_area" id="search_bar_area">
+        <input
+          type="search"
+          id="dropdown_menu"
+          name="dropdown_menu"
+          placeholder="Search"
+          class="search_dropdown"
+        />
+        <label for="dropdown_menu" aria-label="Dropdown search menu"></label>
+      </div>
+    </header>
+    <main class="content_wrap">
+      <section class="successfull_purchase ">
+        <div>
+          <h1>Successfull purchase</h1>
+          <p>
+            Congratulations, the purchase was successful! An email has been sent
+            to your e-mail address with order information (order number 00001).
+          </p>
+          <p>
+            You will have access to the movie(s) for one month after purchase.
+            When you start watching the movie, you will only have access to it
+            for 48 hours.
+          </p>
+          <p>You will find you purchase in your profile.</p>
+        </div>
+      </section>
+      <!-- <section class="watch_now">
+        <div>
+          <h1>Watch now?</h1>
+        </div>
+        <a href="#batman">
+          <figure>
+            <img
+              class="arrowdown"
+              src="icons/icon_arrow.png"
+              alt="Arrow for guiding you down."
+            />
+          </figure> 
+        </a>
+        <div id="yourMoviesContainer">
+         <div class="movie" id="batman">
+          <h2>The Batman</h2>
+          <img src="/images/Movie_batman.jpeg" alt="Batman movie cover" />
+          <button>Start Watching</button>
+        </div>
+      </div>
+      </section> -->
+    </main>
+    <footer>
+      <section class="newsletter">
+        <div class="newsletter_area">
+          <h2>Want to sign up to our newsletter?</h2>
+          <p>
+            Join the SquareEyes family and be among the first to receive news
+            about new movies!
+          </p>
+          <fieldset class="newsletterfieldset">
+            <legend id="n_s" class="gone_text">Newsletter subscribtion</legend>
+            <label for="newsletter_email" aria-labelledby="n_s"></label>
+            <input
+              type="text"
+              class="newsletteremail"
+              id="newsletter_email"
+              placeholder="Your email"
+              name="email"
+              required
+            />
+            <input
+              type="submit"
+              class="newslettersubscribe"
+              value="Subscribe"
+            />
+          </fieldset>
+        </div>
+      </section>
+      <div class="footerbar">
+        <div class="footernav">
+          <span> &copy; SquareEyes </span>
+          <a href="about_us.html">About us</a>
+          <a href="contact_us.html">Contact us</a>
+          <a href="#">Terms and conditions</a>
+        </div>
+        <div class="footerlogo">
+          <a href="index.html"
+            ><img
+              class="logo_footer"
+              src="images/SquareEyes_Logo_org.png"
+              alt="Squareeyes logo"
+          /></a>
+        </div>
+        <div class="footersocialmedia">
+          <a href="#" class="instagram" aria-label="Instagram"></a>
+          <a href="#" class="twitter" aria-label="Twitter"></a>
+          <a href="#" class="facebook" aria-label="Facebook"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

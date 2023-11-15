@@ -1,0 +1,157 @@
+html {
+    --dark_purple: #050517;
+    --purple: #2E1B3B;
+    --yellow: #F0C808;
+    --greywhite: #d2d2d2;
+    --white: #f7f7f7;
+}
+body {
+    background-image: url("/images/squareeyes_logo_glasses_big.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+    background-position: center;
+  }
+
+.contact_us_section {
+    margin: auto;
+    max-width: 500px;
+
+}
+.contact_us_section h1 {
+    display: flex;
+    font-size: 2.2rem;
+    margin-top: 10vh;
+}
+.squareeyes_details {
+    padding: 10px 0px;
+}
+.details {
+    display: flex;
+    flex-direction: row;
+}
+.what {
+    flex: 1;
+    text-align: left;
+    font-weight: 600;
+
+}
+.it_is {
+    flex: 5;
+    text-align: left;
+}
+
+.squareeyes_details p {
+    margin: 0px;
+}
+
+/* message area */
+.message_area {
+    display: flex;
+    flex-direction: column;
+}
+.message_area input:hover, .message_area textarea:hover, .message_area input:focus, .message_area textarea:focus{
+    background-color: var(--white);
+    outline: none;
+}
+.message_area div {
+    margin: 0px;
+    margin: 10px 0px;
+}
+.message_area label {   
+    display: flex;
+    font-size: 0.8rem;
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+.message_area input, .message_area textarea {
+    display: flex;
+    background-color: var(--greywhite);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    padding: 6px;
+    width: 100%;
+    align-items: end;
+}
+.message_input {
+    display: flex; 
+    gap: 1rem;
+}
+.message_input div {
+    width: 100%;
+}
+.message_area textarea {
+    min-height: 180px;
+}
+.submit_area {
+    display: flex;
+}
+.submit_area input:nth-child(1) {
+    visibility: hidden;
+}
+.submit_area div {
+    background-color: var(--yellow);
+    color: var(--dark_purple);
+    text-align:  center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    padding: 12px 0px;
+    cursor: pointer;
+    width: 100%;
+}
+.submit_area div:hover {
+    font-weight: 600;
+}
+
+/* sent message area */
+
+.message_area_sent {
+    height: auto;
+    display: none;
+    width: 100%;
+}
+.message_area_sent div {
+    display: flex;
+    flex-direction: column;
+    padding: 140px 0px 16.8px 0px;
+    box-sizing: border-box;
+}
+.message_area_sent h2 { 
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+.message_area_sent p {
+    justify-content: flex-end;
+    padding-top: 100px;
+    align-self: center;
+}
+.message_area_sent p:hover {
+    font-weight: 600;
+}
+
+/* social media */
+.divsocialmedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0px;
+}
+.socialmedia {
+    display: flex;
+    justify-content: center;    
+    column-gap: 12px;
+}
+.socialmedia figure {
+    margin: 0px;
+}
+.socialmedia_icon {
+    height: 4rem;
+    width: auto;
+    box-sizing: border-box;
+    cursor: pointer;
+  }

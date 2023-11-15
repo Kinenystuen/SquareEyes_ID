@@ -1,0 +1,52 @@
+/* shopping bag */
+.shopping_bag_icon {
+    /*icon */
+    content: url(/icons/icon_shopping_bag_final.png);
+    width: 1.2rem;
+    height: 1.2rem;
+    padding-left: 1rem;
+}
+.shopping_bag { /*adds shopping bag icon to the button */
+    content: url(/icons/icon_shopping_bag_final.png);
+      width: 1rem;
+      height: auto;
+  }
+.gray {
+    background-color: var(--greywhite);
+}
+.yellow {
+    background-color: var(--yellow);
+    
+}
+  .gray::before {
+    content: "Add";
+  }
+  .yellow::before {
+    content: "added";
+    color: var(--dark_purple);
+  }
+
+  .shopping_bag_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;   
+    width: fit-content;
+    height: 100%;
+    padding: 0.4rem;
+    text-transform: uppercase;
+    margin: 0px 2px;
+    color: var(--dark_purple);
+  }
+  
+
+  /* nav right */
+  .icon_shopping_bag_nav {
+    position: relative;
+  }
+  #shopBagCountContainer {
+    position: absolute;
+    background-color: var(--dark_purple);
+    border-radius: 50%;
+    bottom: 30%;
+  }

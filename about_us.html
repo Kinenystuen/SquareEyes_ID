@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="describtion"
+      content="About us page. Learn about who we are and what we stand."
+    />
+    <link rel="stylesheet" href="unicode.css" />
+    <link rel="stylesheet" href="css_code/about_us.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="js/index.js"></script>
+    <title>SquareEyes | About us</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          class="logo_header"
+          src="Images/SquareEyes_Logo_org.png"
+          alt="Logo SquareEyes"
+      /></a>
+      <div class="header_left">
+        <input type="checkbox" name="menu_checkbox" id="menu_checkbox" />
+        <label
+          for="menu_checkbox"
+          class="hamburger_icon"
+          aria-label="Navigation menu"
+        ></label>
+        <nav class="nav_left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movie-pages/all-movies.html">Movies</a></li>
+            <li><a href="your_list.html">Your list</a></li>
+            <li><a href="your_fav.html">Favorites</a></li>
+            <li><a href="about_us.html" class="active_page">About us</a></li>
+            <li><a href="contact_us.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header_right">
+        <nav class="nav_right">
+          <input
+            id="menu_search_icon"
+            type="search"
+            placeholder="Search"
+            class="search"
+            aria-labelledby="search_bar"
+          />
+          <label for="menu_search_icon" class="icon_search"
+            ><span id="search_bar" class="gone_text">Search bar</span></label
+          >
+          <a href="your_fav.html" aria-label="Go to your favorites page">
+            <figure class="icon_favorites_nav"></figure>
+          </a>
+          <a href="your_list.html" aria-label="Go to your list page">
+            <figure class="icon_your_list_nav"></figure>
+          </a>
+          <a
+            href="checkout.html"
+            aria-label="Go to shopping bag"
+            class="iconShopContainer"
+          >
+            <figure class="icon_shopping_bag_nav"></figure>
+            <span id="shopBagCountContainer"></span>
+          </a>
+          <a href="your_page.html" aria-label="Go to your profile">
+            <figure class="icon_profile_nav"></figure>
+          </a>
+        </nav>
+      </div>
+      <div class="search_bar_area" id="search_bar_area">
+        <input
+          type="search"
+          id="dropdown_menu"
+          name="dropdown_menu"
+          placeholder="Search"
+          class="search_dropdown"
+        />
+        <label for="dropdown_menu" aria-label="Dropdown search menu"></label>
+      </div>
+    </header>
+    <main class="content_wrap main_h">
+      <section class="about_us_section">
+        <h1>About us</h1>
+        <div class="about_us_flex">
+          <div class="about_us_text">
+            <p>
+              Welcome to Square Eyes, a community of film-lovers who share a
+              passion for discovering interesting films and supporting small
+              filmmakers. Our mission is to provide a platform where movie
+              enthusiasts can connect, engage, and share their love for cinema.
+            </p>
+            <p>
+              At Square Eyes, we believe that films have the power to inspire,
+              educate, and entertain. That's why we're dedicated to curating a
+              diverse selection of high-quality movies that you won't find
+              anywhere else. Whether you're a casual movie-goer or a hardcore
+              cinephile, we're here to help you find your next favorite film.
+              Join us on this cinematic journey and let's explore the world of
+              movies together.
+            </p>
+            <figure class="squareeyes_logo_glasses"></figure>
+          </div>
+          <div class="about_us_pic">
+            <figure class="movie_set"></figure>
+          </div>
+        </div>
+        <div class="contact_us_here">
+          <h2>Want to get in contact with us?</h2>
+          <a href="/contact_us.html">Contact us here</a>
+        </div>
+        <div class="supportfilm">
+          <p>Supporting small filmmakers and discovering interesting films.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footerbar">
+        <div class="footernav">
+          <span> &copy; SquareEyes </span>
+          <a href="about_us.html">About us</a>
+          <a href="contact_us.html">Contact us</a>
+          <a href="#">Terms and conditions</a>
+        </div>
+        <div class="footerlogo">
+          <a href="index.html"
+            ><img
+              class="logo_footer"
+              src="images/SquareEyes_Logo_org.png"
+              alt="Squareeyes logo"
+          /></a>
+        </div>
+        <div class="footersocialmedia">
+          <a href="#" class="instagram" aria-label="Instagram"></a>
+          <a href="#" class="twitter" aria-label="Twitter"></a>
+          <a href="#" class="facebook" aria-label="Facebook"></a>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/uni.js"></script>
+  </body>
+</html>

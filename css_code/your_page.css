@@ -1,0 +1,67 @@
+html {
+    --dark_purple: #050517;
+    --purple: #2E1B3B;
+    --yellow: #F0C808;
+    --greywhite: #d2d2d2;
+    --white: #f7f7f7;
+}
+
+.signin_section, .signup_section {
+    margin: auto;
+    max-width: 400px;
+    margin-bottom: 10rem;
+}
+.signin_section h1, .signup_section h1{
+    font-size: 2.2rem;
+    margin-top: 10vh;
+}
+
+/* Sign in area */
+
+.signin_area, .signup_area {
+    display: flex;
+    flex-direction: column;
+}
+.signin_area a, .signup_area a {
+    font-size: 0.8rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--greywhite);
+}
+.signin_area div, .signup_area div {
+    margin: 10px 0px;
+}
+.signin_area label, .signup_area label, .signin_area input, .signup_area input {
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;    
+    border: none;
+}
+.signin_area input, .signup_area input {
+    background-color: var(--greywhite);
+    padding: 6px;
+    cursor: pointer;
+}
+.signin_area input:hover , .signin_area input:focus, .signup_area input:hover , .signup_area input:focus {
+    background-color: var(--white);
+}
+a.yellowbutton, .grey input {
+    justify-content: center;
+    text-align:  center;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: var(--dark_purple);
+    padding: 1rem;
+}
+.yellowbutton {
+    background-color: var(--yellow);
+}
+.yellow a:hover, .grey input:hover {
+    font-weight: 600;
+}

@@ -1,0 +1,365 @@
+html {
+    --dark_purple: #050517;
+    --purple: #2E1B3B;
+    --yellow: #F0C808;
+    --greywhite: #d2d2d2;
+    --white: #f7f7f7;
+}
+
+h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* batmansection1 */
+
+#movieImage {
+    position: relative;
+    min-height: 300px;
+    height: 60vh;
+    margin: auto;
+    
+}
+.movieImage {
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    margin: 0 auto;
+}
+
+.headerpic_gradient {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #050517 0%, rgba(5, 5, 23, 0.5) 31.59%, rgba(217, 217, 217, 0) 100%);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.movie_info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 15%;
+    z-index: 2;
+    height: 100%;
+    max-width: 500px;
+}
+
+.movie_info h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.imdb_rating_mobile {
+    display: none;
+}
+
+.movie_price {
+    font-size: 1.4rem;
+}
+
+.button_icon_area {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    color: var(--dark_purple);
+}
+
+.playbutton {
+    font-family: 'montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    background-color: var(--yellow);
+    color: var(--dark_purple);
+    padding: 8px 12.5px;
+    width: fit-content;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.playbutton:hover {
+    font-weight: 600;
+    padding: 8px;
+}
+
+
+
+.shoppingbag_options {
+    display: none;
+    gap: 8px;
+    margin: 8px 0px;
+}
+
+.shoppingbag_options a {
+    text-decoration: none;
+    color: var(--dark_purple);
+    background-color: var(--greywhite);
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.shoppingbag_options a:hover,
+.shopping_bag_button:hover {
+    font-weight: 600;
+    background-color: #d2d2d2;
+}
+
+#shopping_bag_button1:checked~.shoppingbag_options {
+    display: flex;
+}
+
+/* trailer window */
+
+.close_trailer {
+    position: absolute;
+    display: flex;
+    background: rgba(46, 27, 59, 0.5);
+    border-radius: 100%;
+    width: 4rem;
+    height: 4rem;
+    top: 6vh;
+    right: 5%;
+}
+
+.close_trailer figure {
+    content: url(/icons/icon_cross_grey.png);
+    object-position: center;
+    width: 2rem;
+    height: auto;
+    margin: auto;
+}
+
+.close_trailer figure:hover {
+    content: url(/icons/icon_cross.png);
+    cursor: pointer;
+}
+
+.movietrailer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.trailerClass {
+    width: 80%;
+    height: auto;
+    min-height: 80vh;
+    justify-content: center;
+    margin: 20px 0;
+    border: 0px;
+}
+
+/*section 2 - details */
+.movie_details_section {
+    padding: 16px 0px;
+    max-width: 1500px;
+}
+
+.movie_details {
+    display: flex;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.movie_details_more {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.movie_details_more p {
+    font-size: 1rem;
+    padding: 2px 0;
+    margin: 0 3rem 0 0;
+
+}
+
+
+.details_more .movie_details_more:nth-child(4) {
+    margin-top: 20px;
+}
+
+.imdb_rating {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: start;
+    align-items: end;
+    font-size: 0.7rem;
+    padding: 2px 0px;
+}
+
+/* section 3 moviephotos_section */
+
+.moviephotos_section,
+.suggestion_section {
+    position: relative;
+    padding-top: 100px;
+}
+
+.photos_from_movie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    height: auto;
+}
+
+.photos_from_movie img {
+    width: 100%;
+    height: 25rem;
+    box-sizing: border-box;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+@media (max-width: 1500px) {
+    /* batmansection1 */
+
+    .movie_info,
+    .playbutton {
+        font-size: 0.8rem;
+    }
+
+    .movie_info h1 {
+        font-size: 1.8rem;
+    }
+
+    .movie_price {
+        font-size: 1.2rem;
+    }
+
+    .playbutton:hover {
+        font-weight: 600;
+        padding: 8px;
+    }
+
+    /* shopping bag */
+    .shopping_bag_button::before {
+        content: "Add";
+    }
+
+    button.playbutton,
+    .shopping_bag_button {
+        height: 2.6rem;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .movie_details_more p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .movie_info {
+        margin-left: 0px;
+    }
+}
+
+@media (max-height: 900px) {
+    .batmansection1 {
+        min-height: 400px;
+    }
+
+    .movie_info {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 730px) {
+    
+
+    
+
+    .movie_info {
+        position: relative;
+        max-width: 100%;
+        margin-left: 0px;
+    }
+
+    .movie_info_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .movie_info h1 {
+        font-size: 1.2rem;
+    }
+
+    .imdb_rating {
+        display: none;
+    }
+
+    .imdb_rating_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        font-size: 1rem;
+    }
+
+    .movie_price {
+        font-size: 1.4rem;
+        margin: 8px;
+    }
+
+    .playbutton {
+        padding: 0px 8px;
+    }
+
+    .playbutton:hover {
+        padding: 0px 4.3px;
+    }
+
+    .buttons label a {
+        padding: 0px;
+    }
+
+    /* trailer window */
+    .movietrailer {
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    .movietrailer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .close_trailer {
+        position: absolute;
+        display: flex;
+        background: rgba(46, 27, 59, 0.5);
+        border-radius: 100%;
+        width: 4rem;
+        height: 4rem;
+        top: 2%;
+        right: 2%;
+        z-index: 2;
+    }
+
+    .batman_trailer {
+        width: 90%;
+        min-height: 40vh;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+}

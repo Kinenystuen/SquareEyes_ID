@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="describtion" content="Information about The Batman movie" />
+    <link rel="stylesheet" href="/unicode.css" />
+    <link rel="stylesheet" href="/css_code/batman_movie_page.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="/js/index.js"></script>
+    <!-- fix js files -->
+
+    <script defer src="/js/uni.js"></script>
+    <title>SquareEyes |</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/index.html"
+        ><img
+          class="logo_header"
+          src="/Images/SquareEyes_Logo_org.png"
+          alt="Logo SquareEyes"
+      /></a>
+      <div class="header_left">
+        <input type="checkbox" name="menu_checkbox" id="menu_checkbox" />
+        <label
+          for="menu_checkbox"
+          class="hamburger_icon"
+          aria-label="Navigation menu"
+        ></label>
+        <nav class="nav_left">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/movie-pages/all-movies.html">Movies</a></li>
+            <li><a href="/your_list.html">Your list</a></li>
+            <li><a href="/your_fav.html">Favorites</a></li>
+            <li><a href="/about_us.html">About us</a></li>
+            <li><a href="/contact_us.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header_right">
+        <nav class="nav_right">
+          <input
+            id="menu_search_icon"
+            type="search"
+            placeholder="Search"
+            class="search"
+            aria-labelledby="search_bar"
+          />
+          <label for="menu_search_icon" class="icon_search"
+            ><span id="search_bar" class="gone_text">Search bar</span></label
+          >
+          <a href="/your_fav.html" aria-label="Go to your favorites page">
+            <figure class="icon_favorites_nav"></figure>
+          </a>
+          <a href="/your_list.html" aria-label="Go to your list page">
+            <figure class="icon_your_list_nav"></figure>
+          </a>
+          <a
+            href="checkout.html"
+            aria-label="Go to shopping bag"
+            class="iconShopContainer"
+          >
+            <figure class="icon_shopping_bag_nav"></figure>
+            <span id="shopBagCountContainer"></span>
+          </a>
+          <a href="/your_page.html" aria-label="Go to your profile">
+            <figure class="icon_profile_nav"></figure>
+          </a>
+        </nav>
+      </div>
+      <div class="search_bar_area" id="search_bar_area">
+        <input
+          type="search"
+          id="dropdown_menu"
+          name="dropdown_menu"
+          placeholder="Search"
+          class="search_dropdown"
+        />
+        <label for="dropdown_menu" aria-label="Dropdown search menu"></label>
+      </div>
+    </header>
+    <main class="main_h">
+      <div class="content_wrap">
+        <button class="go_back_button" type="button" onclick="history.back()">
+          <span class="backarrow"></span
+          ><span class="go_back_button_text">Go back</span>
+        </button>
+      </div>
+      <section id="movieDetailContainer">
+        <div class="loader_area"><div class="loader"></div></div>
+        <!--  
+
+            JS1 add html from js
+
+          -->
+      </section>
+      <!----->
+      <section class="suggestion_section content_wrap">
+        <h2>Suggestions:</h2>
+        <div class="moviephotos" id="suggestionContainer">
+          <div class="loader_area"><div class="loader"></div></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footerbar">
+        <div class="footernav">
+          <span> &copy; SquareEyes </span>
+          <a href="/about_us.html">About us</a>
+          <a href="/contact_us.html">Contact us</a>
+          <a href="#">Terms and conditions</a>
+        </div>
+        <div class="footerlogo">
+          <a href="/index.html"
+            ><img
+              class="logo_footer"
+              src="/images/SquareEyes_Logo_org.png"
+              alt="Squareeyes logo"
+          /></a>
+        </div>
+        <div class="footersocialmedia">
+          <a href="#" class="instagram" aria-label="Instagram"></a>
+          <a href="#" class="twitter" aria-label="Twitter"></a>
+          <a href="#" class="facebook" aria-label="Facebook"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

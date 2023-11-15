@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="describtion"
+      content="Our movie library. Look into our collection of great movies."
+    />
+    <link rel="stylesheet" href="/unicode.css" />
+    <link rel="stylesheet" href="/css_code/all_movies.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="/js/index.js"></script>
+    <title>SquareEyes | Moviepage</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/index.html"
+        ><img
+          class="logo_header"
+          src="/Images/SquareEyes_Logo_org.png"
+          alt="Logo SquareEyes"
+      /></a>
+      <div class="header_left">
+        <input type="checkbox" name="menu_checkbox" id="menu_checkbox" />
+        <label
+          for="menu_checkbox"
+          class="hamburger_icon"
+          aria-label="Navigation menu"
+        ></label>
+        <nav class="nav_left">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li>
+              <a href="/movie-pages/all-movies.html" class="active_page"
+                >Movies</a
+              >
+            </li>
+            <li><a href="/your_list.html">Your list</a></li>
+            <li><a href="/your_fav.html">Favorites</a></li>
+            <li><a href="/about_us.html">About us</a></li>
+            <li><a href="/contact_us.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header_right">
+        <nav class="nav_right">
+          <input
+            type="search"
+            id="menu_search_icon"
+            name="menu_search_icon"
+            placeholder="Search"
+            class="search"
+          />
+          <label
+            for="menu_search_icon"
+            class="icon_search"
+            aria-label="Search"
+          ></label>
+          <a href="/your_fav.html" aria-label="Go to your favorites page">
+            <figure class="icon_favorites_nav"></figure>
+          </a>
+          <a href="/your_list.html" aria-label="Go to your list page">
+            <figure class="icon_your_list_nav"></figure>
+          </a>
+          <a
+            href="/checkout.html"
+            aria-label="Go to shopping bag"
+            class="iconShopContainer"
+          >
+            <figure class="icon_shopping_bag_nav"></figure>
+            <span id="shopBagCountContainer"></span>
+          </a>
+          <a href="/your_page.html" aria-label="Go to your profile">
+            <figure class="icon_profile_nav"></figure>
+          </a>
+        </nav>
+      </div>
+      <div class="search_bar_area" id="search_bar_area">
+        <input
+          type="search"
+          id="dropdown_menu"
+          name="dropdown_menu"
+          placeholder="Search"
+          class="search_dropdown"
+        />
+        <label for="dropdown_menu" aria-label="Dropdown search menu"></label>
+      </div>
+    </header>
+    <main class="content_wrap main_h">
+      <h1>Movies</h1>
+      <div class="movie_org">
+        <input
+          type="checkbox"
+          name="moviemenu_checkbox"
+          id="moviemenu_checkbox"
+        />
+        <nav class="movie_nav">
+          <ul>
+            <li>
+              <label for="moviemenu_checkbox" class="categories"
+                ><span class="gone_text">Show movie categories</span>Categories
+                - All</label
+              >
+            </li>
+            <li><a href="" class="active_movie">All</a></li>
+            <li><a href="">Action</a></li>
+            <li><a href="">Adventure</a></li>
+            <li><a href="">Animation</a></li>
+            <li><a href="">Comedy</a></li>
+            <li><a href="">Horror</a></li>
+            <li><a href="">Family</a></li>
+          </ul>
+        </nav>
+        <div>
+          <input
+            type="checkbox"
+            name="sortby_menu_button"
+            id="sortby_menu_button"
+          />
+          <nav class="sortby_menu">
+            <ul>
+              <li>
+                <label for="sortby_menu_button" class="sortby sortby_text"
+                  >Sort by</label
+                >
+              </li>
+              <li><a href="">Name</a></li>
+              <li><a href="">Release date</a></li>
+              <li><a href="">Popularity</a></li>
+              <li><a href="">Price low-high</a></li>
+              <li><a href="">Price high-low</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <section class="movies" id="allMoviesContainer">
+        <div class="loader_area">
+          <div class="loader"></div>
+        </div>
+        <!--  
+          
+          Removed hardcoded data for all the movies
+        
+        -->
+      </section>
+      <div class="supportfilm">
+        <div class="supportfilm_area">
+          <p>Supporting small filmmakers and discovering interesting films.</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footerbar">
+        <div class="footernav">
+          <span> &copy; SquareEyes </span>
+          <a href="/about_us.html">About us</a>
+          <a href="/contact_us.html">Contact us</a>
+          <a href="#">Terms and conditions</a>
+        </div>
+        <div class="footerlogo">
+          <a href="/index.html"
+            ><img
+              class="logo_footer"
+              src="/images/SquareEyes_Logo_org.png"
+              alt="Squareeyes logo"
+          /></a>
+        </div>
+        <div class="footersocialmedia">
+          <a href="#" class="instagram" aria-label="Instagram"></a>
+          <a href="#" class="twitter" aria-label="Twitter"></a>
+          <a href="#" class="facebook" aria-label="Facebook"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

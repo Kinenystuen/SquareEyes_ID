@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="describtion"
+      content="Your profile. See your purchase history, edit your settings and more."
+    />
+    <link rel="stylesheet" href="unicode.css" />
+    <link rel="stylesheet" href="css_code/your_profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="js/index.js"></script>
+    <title>SquareEyes | Your profile</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          class="logo_header"
+          src="Images/SquareEyes_Logo_org.png"
+          alt="Logo SquareEyes"
+      /></a>
+      <div class="header_left">
+        <input type="checkbox" name="menu_checkbox" id="menu_checkbox" />
+        <label
+          for="menu_checkbox"
+          class="hamburger_icon"
+          aria-label="Navigation menu"
+        ></label>
+        <nav class="nav_left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movie-pages/all-movies.html">Movies</a></li>
+            <li><a href="your_list.html">Your list</a></li>
+            <li><a href="your_fav.html">Favorites</a></li>
+            <li><a href="about_us.html">About us</a></li>
+            <li><a href="contact_us.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header_right">
+        <nav class="nav_right">
+          <input
+            id="menu_search_icon"
+            type="search"
+            placeholder="Search"
+            class="search"
+            aria-labelledby="search_bar"
+          />
+          <label for="menu_search_icon" class="icon_search"
+            ><span id="search_bar" class="gone_text">Search bar</span></label
+          >
+          <a href="your_fav.html" aria-label="Go to your favorites page">
+            <figure class="icon_favorites_nav"></figure>
+          </a>
+          <a href="your_list.html" aria-label="Go to your list page">
+            <figure class="icon_your_list_nav"></figure>
+          </a>
+          <a
+            href="checkout.html"
+            aria-label="Go to shopping bag"
+            class="iconShopContainer"
+          >
+            <figure class="icon_shopping_bag_nav"></figure>
+            <span id="shopBagCountContainer"></span>
+          </a>
+          <a href="your_page.html" aria-label="Go to your profile">
+            <figure class="icon_profile_nav"></figure>
+          </a>
+        </nav>
+      </div>
+      <div class="search_bar_area" id="search_bar_area">
+        <input
+          type="search"
+          id="dropdown_menu"
+          name="dropdown_menu"
+          placeholder="Search"
+          class="search_dropdown"
+        />
+        <label for="dropdown_menu" aria-label="Dropdown search menu"></label>
+      </div>
+    </header>
+    <main class="main_h content_wrap">
+      <div class="max_width">
+        <h1>Your profile</h1>
+        <div class="sections_profile">
+          <section class="information_elements">
+            <h2>Hi user 007</h2>
+            <a href="/your_list.html" class="information_box">
+              <figure class="icon_your_list_nav fitprofilepage"></figure>
+              <div class="information_text">
+                <h3>Your list</h3>
+                <h4>Your list of movies</h4>
+              </div>
+              <div>
+                <figure class="rightarrow2"></figure>
+              </div>
+            </a>
+            <a href="/your_fav.html" class="information_box">
+              <figure class="icon_favorites_nav fitprofilepage"></figure>
+              <div class="information_text">
+                <h3>Favorites</h3>
+                <h4>Your favorite movies</h4>
+              </div>
+              <div>
+                <figure class="rightarrow2"></figure>
+              </div>
+            </a>
+
+            <a href="#" class="information_box">
+              <figure class="icon_settings_wheel fitprofilepage"></figure>
+              <div class="information_text">
+                <h3>Settings</h3>
+                <h4 class="hidden_text">Change settings</h4>
+              </div>
+              <div>
+                <figure class="rightarrow2"></figure>
+              </div>
+            </a>
+          </section>
+
+          <section class="purchase_history">
+            <h2>Purchase history</h2>
+            <h3>Not watched</h3>
+            <div class="information_box2">
+              <a href="/products/batman-movie-page.html" class="movie_cover"
+                ><img src="/images/Movie_batman.jpeg" alt="Batman movie cover"
+              /></a>
+              <div class="information_movie_text">
+                <h4>The Batman</h4>
+                <p>
+                  Not yet watched - <span class="yellow">30 days left</span>
+                </p>
+              </div>
+              <a href="#" class="profile_watch_now"
+                >Watch now
+                <figure class="rightarrow2"></figure
+              ></a>
+            </div>
+            <h3>Watched</h3>
+            <div class="information_box2">
+              <a href="/products/batman-movie-page.html" class="movie_cover"
+                ><img
+                  src="/images/Movie_fasr_&_furious.jpeg"
+                  alt="Batman movie cover"
+              /></a>
+              <div class="information_movie_text">
+                <h4>Fast & Furiuos: Hobbs & Shaw</h4>
+                <p>Watched</p>
+              </div>
+            </div>
+            <div class="information_box2">
+              <a href="/products/batman-movie-page.html" class="movie_cover"
+                ><img
+                  src="/images/Movie_toy_story.jpeg"
+                  alt="Toy story 4 movie cover"
+              /></a>
+              <div class="information_movie_text">
+                <h4>Toy story 4</h4>
+                <p>Watched</p>
+              </div>
+            </div>
+            <div class="information_box2">
+              <a href="/products/batman-movie-page.html" class="movie_cover"
+                ><img src="/images/Movie_scream.jpeg" alt="Scream movie cover"
+              /></a>
+              <div class="information_movie_text">
+                <h4>Scream</h4>
+                <p>Watched</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footerbar">
+        <div class="footernav">
+          <span> &copy; SquareEyes </span>
+          <a href="about_us.html">About us</a>
+          <a href="contact_us.html">Contact us</a>
+          <a href="#">Terms and conditions</a>
+        </div>
+        <div class="footerlogo">
+          <a href="index.html"
+            ><img
+              class="logo_footer"
+              src="images/SquareEyes_Logo_org.png"
+              alt="Squareeyes logo"
+          /></a>
+        </div>
+        <div class="footersocialmedia">
+          <a href="#" class="instagram" aria-label="Instagram"></a>
+          <a href="#" class="twitter" aria-label="Twitter"></a>
+          <a href="#" class="facebook" aria-label="Facebook"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

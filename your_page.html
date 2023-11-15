@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="describtion"
+      content="Webpage for movie lovers. Choose between numbers of fantastic movies."
+    />
+    <link rel="stylesheet" href="unicode.css" />
+    <link rel="stylesheet" href="css_code/your_page.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="js/index.js"></script>
+    <title>SquareEyes | Sign in / Sign up</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          class="logo_header"
+          src="Images/SquareEyes_Logo_org.png"
+          alt="Logo SquareEyes"
+      /></a>
+      <div class="header_left">
+        <input type="checkbox" name="menu_checkbox" id="menu_checkbox" />
+        <label
+          for="menu_checkbox"
+          class="hamburger_icon"
+          aria-label="Navigation menu"
+        ></label>
+        <nav class="nav_left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movie-pages/all-movies.html">Movies</a></li>
+            <li><a href="your_list.html">Your list</a></li>
+            <li><a href="your_fav.html">Favorites</a></li>
+            <li><a href="about_us.html">About us</a></li>
+            <li><a href="contact_us.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header_right">
+        <nav class="nav_right">
+          <input
+            id="menu_search_icon"
+            type="search"
+            placeholder="Search"
+            class="search"
+            aria-labelledby="search_bar"
+          />
+          <label for="menu_search_icon" class="icon_search"
+            ><span id="search_bar" class="gone_text">Search bar</span></label
+          >
+          <a href="your_fav.html" aria-label="Go to your favorites page">
+            <figure class="icon_favorites_nav"></figure>
+          </a>
+          <a href="your_list.html" aria-label="Go to your list page">
+            <figure class="icon_your_list_nav"></figure>
+          </a>
+          <a
+            href="checkout.html"
+            aria-label="Go to shopping bag"
+            class="iconShopContainer"
+          >
+            <figure class="icon_shopping_bag_nav"></figure>
+            <span id="shopBagCountContainer"></span>
+          </a>
+          <a href="your_page.html" aria-label="Go to your profile">
+            <figure class="icon_profile_nav"></figure>
+          </a>
+        </nav>
+      </div>
+      <div class="search_bar_area" id="search_bar_area">
+        <input
+          type="search"
+          id="dropdown_menu"
+          name="dropdown_menu"
+          placeholder="Search"
+          class="search_dropdown"
+        />
+        <label for="dropdown_menu" aria-label="Dropdown search menu"></label>
+      </div>
+    </header>
+    <main class="main_h content_wrap">
+      <section class="signin_section" id="section_signin">
+        <h1>Sign in</h1>
+        <form class="signin_area" method="post" enctype="text/plain">
+          <div class="signin">
+            <div>
+              <label for="email_sign_in">Email</label>
+              <input
+                type="email"
+                name="email_sign_in"
+                id="email_sign_in"
+                placeholder="Your email"
+                aria-label="Your email"
+              />
+            </div>
+            <div>
+              <label for="password1">Your password</label>
+              <input
+                type="password"
+                name="password1"
+                id="password1"
+                placeholder="Your password"
+                aria-label="Your password"
+              />
+              <a href="#" class="f_p">Forgotten your password?</a>
+              <div class="checkboxes">
+                <input
+                  type="checkbox"
+                  name="remember_me"
+                  id="remember_me"
+                  aria-label="Checkbox: Remember me"
+                />
+                <label for="remember_me">Remember me</label>
+              </div>
+            </div>
+          </div>
+          <a href="/your_profile.html" class="yellowbutton">Sign in</a>
+          <div class="grey">
+            <p>Don't have an account?</p>
+            <input
+              type="button"
+              id="sign_up"
+              name="sign_up"
+              value="Sign up now"
+            />
+          </div>
+        </form>
+      </section>
+      <section class="signup_section" id="section_signup">
+        <h1>Sign up</h1>
+        <form class="signup_area" method="post" enctype="text/plain">
+          <div class="signup">
+            <div>
+              <label for="first_name">First name</label>
+              <input
+                type="text"
+                name="first_name"
+                id="first_name"
+                placeholder="First name"
+                aria-label="First name"
+              />
+            </div>
+            <div>
+              <label for="last_name">Last name</label>
+              <input
+                type="text"
+                name="last_name"
+                id="last_name"
+                placeholder="Last name"
+                aria-label="Last name"
+              />
+            </div>
+            <div>
+              <label for="email_sign_up">Email</label>
+              <input
+                type="email"
+                name="email_sign_up"
+                id="email_sign_up"
+                placeholder="Your email"
+                aria-label="Your email"
+              />
+            </div>
+            <div>
+              <label for="password2">Your password</label>
+              <input
+                type="password"
+                name="password2"
+                id="password2"
+                placeholder="Your password"
+                aria-label="Your password"
+              />
+            </div>
+            <div>
+              <label for="password3">Repeat password</label>
+              <input
+                type="password"
+                name="password3"
+                id="password3"
+                placeholder="Repeat password"
+                aria-label="Repeat password"
+              />
+            </div>
+          </div>
+          <a href="/your_profile.html" class="yellowbutton">Sign up</a>
+          <div class="grey">
+            <p>Already have an account?</p>
+            <input type="button" id="sign_in" name="sign_in" value="Sign in" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footerbar">
+        <div class="footernav">
+          <span> &copy; SquareEyes </span>
+          <a href="about_us.html">About us</a>
+          <a href="contact_us.html">Contact us</a>
+          <a href="#">Terms and conditions</a>
+        </div>
+        <div class="footerlogo">
+          <a href="index.html"
+            ><img
+              class="logo_footer"
+              src="images/SquareEyes_Logo_org.png"
+              alt="Squareeyes logo"
+          /></a>
+        </div>
+        <div class="footersocialmedia">
+          <a href="#" class="instagram" aria-label="Instagram"></a>
+          <a href="#" class="twitter" aria-label="Twitter"></a>
+          <a href="#" class="facebook" aria-label="Facebook"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+html {
+    --dark_purple: #050517;
+    --purple: #2E1B3B;
+    --yellow: #F0C808;
+    --greywhite: #d2d2d2;
+    --white: #f7f7f7;
+}
+body {
+    background-image: url("/images/squareeyes_logo_glasses_big.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 40%;
+    background-position-x: 90%;
+    background-position-y: 30%;
+}
+.max_width {
+    margin-bottom: 100px;
+}
+.sections_profile {
+    max-width: 1500px;
+    display: flex;
+    flex: 1;
+    margin: 0px auto;
+}
+/* information bar */
+.information_elements {
+    width: 100%;
+    margin-right: 5%;
+}
+.information_elements h2, .purchase_history h2 {
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+.information_box {
+    flex: 1;
+    display: flex;
+    padding: 0.4rem;
+    box-shadow: 0px 4px 50px rgba(80, 80, 80, 0.25);
+    border-radius: 8px;
+    align-items: center;
+    margin: 0.5rem 0px;
+}
+.information_box:hover, .information_box2:hover {
+    box-shadow: 0px 4px 70px 2px rgba(210, 210, 210, 0.2)
+}
+.information_box:hover .rightarrow2 {
+    content: url(/icons/icon_rightarrow_hover.png);
+    transform: scale(1.1) translateX(5px);
+}
+.information_box:hover h3 {
+    font-size: 1.2rem;
+}
+
+.fitprofilepage {
+    flex: 1fr;
+    height: 2rem;
+}
+.information_text, .information_movie_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem;
+    justify-content: left;
+    color: var(--greywhite);
+}
+.information_elements a {
+    text-decoration: none;
+}
+.information_text h3 {
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin: 0px;
+}
+.information_text h4 {
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin: 0.4rem 0px 0px 0px;
+}
+.rightarrow2 {
+    flex: 1;
+    display: flex;
+    content: url(/icons/icon_rightarrow.png);
+    height: 2rem;
+    width: auto;
+    justify-content: right;
+    padding: 8px;
+}
+
+/* purchase history */
+.purchase_history {
+    width: 100%;
+}
+.information_box2 {
+    flex: 1;
+    display: flex;
+    padding: 0px;
+    box-shadow: 0px 4px 50px rgba(80, 80, 80, 0.25);
+    border-radius: 8px;
+    align-items: center;
+    margin: 0.5rem 0px;
+}
+.movie_cover {
+    max-width: 82px;
+    max-height: 116px;
+    overflow: hidden;
+    margin: 0px;
+}
+.movie_cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.purchase_history h3 {
+    font-size: 1rem;
+    font-weight: 100;
+}
+.purchase_history h3:nth-last-child(2) {
+    margin-top: 50px;
+}
+.information_movie_text h4 {
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 0px;
+}
+.information_movie_text p {
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin: 0.4rem 0px 0px 0px;
+}
+.profile_watch_now {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.profile_watch_now .rightarrow2 {
+    margin: 8px;
+}
+.information_box2 a {
+    color: var(--greywhite);
+    text-decoration: none;
+}
+
+
+.information_box2:hover .profile_watch_now {
+    font-size: 1rem;
+}
+.information_box2:hover .profile_watch_now .rightarrow2 {
+    content: url(/icons/icon_rightarrow_hover.png);
+    transform: scale(1.1) translateX(5px);
+}
+
+
+@media (max-width: 880px) {
+    .sections_profile {
+        flex-direction: column;
+    }
+    .information_elements {
+        margin-bottom: 5rem;
+    }
+}

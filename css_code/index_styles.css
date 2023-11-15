@@ -1,0 +1,739 @@
+
+html {
+  --dark_purple: #050517;
+  --purple: #2E1B3B;
+  --yellow: #F0C808;
+  --greywhite: #d2d2d2;
+  --white: #f7f7f7;
+}
+/* /////////// Home page //////////// */
+main h1 {
+  margin-top: 3.8rem;
+}
+h1 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  margin: 16px auto;
+  max-width: 1500px;
+}
+/* Header design */
+  
+.headerdesign {
+  position: relative;
+  height: 735px;
+  max-width: 100%;
+  text-align: center;
+  align-items: center;
+  color: var(--white);
+  margin-top: 5vh;
+}
+
+.headergradient {
+  /*background*/
+  position: absolute;
+  height: auto;
+  left: 0px;
+  right: 0px;
+  top: 84px;
+  bottom: 200px;
+  background: radial-gradient(56.02% 56.02% at 50% 64.69%,
+      #4f3362 0.09%,
+      #2b1d3e 29.54%,
+      #050517 100%);
+}
+
+.headerscreenmes {
+  position: absolute;
+  left: calc(50% - 704px/2);
+  top: 86px;
+  width:fit-content
+}
+
+.headerscreen {
+  box-sizing: border-box;
+  position: absolute;
+  width: 704px;
+  height: 345px;
+  border: 3px solid var(--purple);
+  box-shadow: 0px 4px 70px 2px #D2D2D2;
+  border-radius: 8px;
+  transition: all 0.3 ease;
+}
+
+.headerscreen:hover {
+  background: radial-gradient(91.59% 91.59% at 50% 50.14%, rgba(27, 14, 44, 0) 0%, #1B0E2C 100%);
+}
+
+.squareeyes_glasses {
+  position: absolute;
+  width: 104.5px;
+  height: 61.95px;
+  left: calc(50% - 104.5px/2 - 0.25px);
+  top: 183px;
+}
+.Squareeyes_logoname {
+  position: absolute;
+  display: flex;
+  top: 185px;
+  left: calc(50% - 286px/2);
+  max-height: 245px;
+  max-width: 50vw;
+  object-fit: scale-down;
+  font-weight: 800;
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 49px;
+  text-transform: uppercase;
+}
+
+.logo_undertext {
+  position: absolute;
+  width: 628px;
+  max-height: 22px;
+  left: calc(50% - 628px/2 - 2px);
+  top: 292px;
+
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 22px;
+}
+
+.batmanseats {
+  position: absolute;
+  display: flex;
+  max-width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 358px;
+  top: 400px;
+  object-fit: cover;
+}
+
+.arrowdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  position: absolute;
+  width: 81.93px;
+  height: 93.99px;
+  left: calc(50% - 81.93px/2 - 0.04px);
+  bottom: 10%;
+  transition: transform 0.3s; /*adding smooth transition */
+}
+
+.arrowdown:hover {
+  transform: scale(1.1) translateY(20px);
+}
+
+/*  section1 design - crewpicture*/
+
+.section1 {
+  padding-top: 20%;
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 40px auto 0px ;
+}
+
+.section1_info {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 1rem;
+  align-items: flex-end;
+}
+
+.section1_info a {
+  padding: 4px 4px;
+  border-radius: 5px;
+  border: 1px solid var(--greywhite);
+  color: var(--greywhite);
+  text-decoration: none;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.section1_info a:hover {
+  color: var(--white);
+  font-weight:600;
+}
+
+.section1_image {
+  flex: 3;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-left: var(--purple) 3px solid;
+  padding-left: 20px;
+}
+
+.section1 img {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  
+}
+
+
+/* Section2 design  dots part*/
+
+.section2 {
+  margin: 170px auto;
+  background-color: var(--purple);
+  max-width: 100%;
+  padding: 4% 0px;
+  text-align: left;
+  max-width: 2150px;
+}
+
+.section2_area {
+  
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0px auto;
+}
+
+.section2_row p, .section2_row img {
+  display: inline-block;
+  flex-direction: row;
+  vertical-align: middle;
+  margin: 10px;
+}
+
+.section2_row p {
+  width: 70%;
+  font-size: 1rem;
+}
+
+.yellow_dot {
+  height: 28px;
+}
+
+/* Section3 design - batman part */
+
+.section3 {
+  position: relative;  
+  margin: 200px auto 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 0px auto;
+}
+
+.section3_info {
+  flex: 1;
+  padding: 20px;
+  flex-direction: column-reverse;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.batman_cover {
+  display: none;
+}
+
+.section3_image {
+  flex: 3;
+  justify-content: center;
+  border-right: var(--purple) 3px solid;
+  padding-right: 20px;
+}
+
+.section3 img {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  
+}
+
+/* Section 4 - movies */
+
+.section4 {
+  min-height: auto;
+  margin: 170px auto;
+  max-width: 1500px;
+}
+.section4 div {
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+}
+
+.section4 h2 {
+  grid-column: -1/1;
+  font-size: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.section4 img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  grid-column: -1/1;
+  object-fit: cover; /* to set a specific height, without the pic squeezing */
+
+}
+
+.section4 img:hover {
+  outline: 2px solid var(--purple);
+}
+
+.section4_movie {
+  margin: 0px;
+}
+
+/* Section 5 - most popular right now*/
+
+.section5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 170px auto;
+}
+
+.section5_image {
+  border-right: 3px solid var(--purple);
+  padding-right: 20px;
+}
+.section5_image img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.once_upon {
+  display: none;
+}
+
+.section5_info {
+  flex: 1;
+  padding: 20px;
+}
+
+.section5 h2 {
+  font-family: 'Abril Fatface', 'Montserrat', Verdana, Geneva, Tahoma, sans-serif ;
+  font-weight: 100;
+  font-size: 1.7rem;
+  line-height: 49px;
+}
+
+.section5 h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.section5 a {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--greywhite);
+  border: 1px solid var(--greywhite);
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 50px;
+  width: fit-content;
+}
+
+.section5_info a:hover {
+  color: var(--white);
+  font-weight:600;
+}
+
+
+@media (max-width:1060px) {
+
+  /* Header design */
+
+  .headerdesign {
+    height: 635px;
+  }
+
+  .headerscreenmes {
+    left: calc(50% - 469.3px/2);
+  }
+
+  .headerscreen {
+    width: 469.3px;
+    height: 230px;
+  }
+
+  .headergradient {
+    bottom: 320px;
+  }
+
+  .squareeyes_glasses {
+    width: 69.6px;
+    height: 41.3px;
+    left: calc(50% - 69.6px/2 - 0.25px);
+    top: 153px;
+  }
+
+  .Squareeyes_logoname {
+    top: 142px;
+    left: calc(50% - 228.38px/2);
+    font-size: 2rem;
+    line-height: 25px;
+  }
+
+  .logo_undertext {
+    top: 228px;
+    font-size: 0.9rem;
+    left: calc(50% - 160px/2);
+    
+    width: 160px;
+  }
+
+  .batmanseats {
+    top: 310px;
+    max-width: 100%;
+    min-width: 500px;
+  }
+
+  .arrowdown {
+    width: 51.93px;
+    height: 63.99px;
+    left: calc(50% - 51.93px/2 - 0.04px);
+  }
+
+  .arrowdown:hover {
+    transform: scale(1.1) translateY(20px);
+  }
+
+  /* section 2 */
+  .yellow_dot {
+    height: 24px;
+  }
+}
+
+/* ///// new media query ////// */
+
+@media (max-width:920px) {
+  html {
+    font-size: 14px;
+  }
+
+
+/* section 2 */
+  .yellow_dot {
+    height: 20px;
+  }
+  .Squareeyes_logoname {
+    left: calc(50% - 199.83px/2);
+  }
+}
+
+
+/* ///// new media query - tablet?////// */
+
+@media (max-width:820px) {
+
+  .section1_image, .section3_image{
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+  }
+  
+/* section 2 */
+  .yellow_dot {
+    height: 16px;
+  }
+  .Squareeyes_logoname {
+    left: calc(50% - 199.83px/2);
+  }
+
+  .section1, .section2, .section3, .section4, .section5 {
+    margin: 100px 0px;
+  }
+
+  html {
+    background-color: pink;
+  }
+
+  /* Section 5 - most popular right now*/
+
+.mostPopular {
+  display: flex;
+  object-fit: cover;
+  max-height: 240px;
+  width: 100%;
+}
+.mostPopular {
+  display: none;
+}
+
+.section5_info {
+  flex: 1;
+  padding: 0px 0rem 0px 1rem;
+}
+
+.section5 h2 {
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+
+.section5 h3 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.section5 a {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--greywhite);
+  border: 1px solid var(--greywhite);
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 50px;
+  width: fit-content;
+}
+
+.section5_info a:hover {
+  color: var(--white);
+  font-weight:600;
+}
+
+}
+
+/* media mobile version */
+
+@media (max-width: 520px) {
+  
+/* Header design */
+
+  .headerdesign {
+    height: 400px;
+  }
+
+  .headerscreenmes {
+    left: calc(50% - 266px/2);
+  }
+
+  .headerscreen {
+    margin-top: 0px;
+    width: 266px;
+    height: 126.73px;
+  }
+
+  .headergradient {
+    bottom: 100px;
+  }
+
+  .squareeyes_glasses {
+    width: 54.81px;
+    height: 32.49px;
+    left: calc(50% - 54.81px/2 - 0.25px);
+    top: 105px;
+  }
+
+  .Squareeyes_logoname {
+    top: 82px;
+    left: calc(50% - 139.89px/2);
+    font-size: 1.4rem;
+  }
+
+  .logo_undertext {
+    top: 150px;
+    left: calc(50% - 140px/2);
+    width: 140px;
+    font-size: 0.7rem;
+  }
+
+  .batmanseats {
+    top: 250px;
+    max-width: 100%;
+    min-width: auto;
+  }
+
+  .arrowdown {
+    width: 40px;
+    height: 50px;
+    left: calc(50% - 51.93px/2 - 0.04px);
+  }
+
+  .arrowdown:hover {
+    transform: scale(1.1) translateY(20px);
+  }
+
+  /* section 2 */
+  .yellow_dot {
+    height: 24px;
+  }
+
+  html {
+    background-color: green;
+  }
+
+  /*  section1 design - crewpicture*/
+
+.section1 {
+  padding: 0px;
+  flex-direction: column-reverse;
+}
+
+.section1_info {
+  padding: 0rem 3rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.section1_info a {
+  align-self: flex-start;
+}
+
+.section1_image {
+  padding: 0px;
+  border-left: none;
+  border-bottom: var(--purple) 3px solid;
+  padding-left: none;
+}
+
+/* Section2 design  dots part*/
+
+.section2 {
+  padding: 4% 0px;
+  text-align: left;
+  width: 100%;
+}
+
+.section2_area {
+  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.section2_row p, .section2_row img {
+  display: inline-block;
+  flex-direction: row;
+  vertical-align: middle;
+  margin: 10px;
+}
+
+.section2_row p {
+  width: 70%;
+  font-size: 1rem;
+}
+
+.yellow_dot {
+  height: 28px;
+}
+
+/* Section3 design - batman part */
+
+.section3_info {
+  margin-left: 1rem;
+  padding: 0rem 0rem 0rem 1rem;
+  font-size: 1rem;
+}
+
+.section3_image {
+  flex: 1;
+  border-right: none;
+  padding-right: 0px;
+  justify-content: flex-start;
+}
+.batman_cover {
+  display: flex;
+  max-height: 240px;
+  border-right: var(--purple) 3px solid;
+  padding-right: 1rem;
+}
+.batman_sunset {
+  display: none
+}
+
+/* Section 5 - most popular right now*/
+
+.section5 {
+  position: relative;
+  flex-direction: column;
+  margin: 120px auto 100px;
+}
+
+.section5_image {
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  border-right: none;
+  padding-right: 0px;
+}
+
+.once_upon_home {
+  display: none;
+}
+
+.once_upon {
+display: flex;
+transform: scale(1.4);
+max-height: 440px;
+margin: 0px auto;
+}
+
+.background_gradient {
+  position: absolute;
+  display: flex;
+  order: 2;
+  height: 300px;
+  width: 100%;
+  bottom: 0px;
+  background: linear-gradient(180deg, rgba(5, 5, 23, 0) 0%, rgba(5, 5, 23, 0.71838) 33.53%, rgba(5, 5, 23, 0.978611) 58.19%, #050517 100%);
+}
+
+.section5_info {
+  padding: 0rem 0rem 1rem;
+  height: 200px;
+  width: 100%;
+  column-gap: 1rem
+}
+
+.section5 h2 {
+  position: absolute;
+  top: -60px;
+  font-size: 1.3rem;
+}
+
+.section5 h3 {
+  position: relative;
+  margin: 0px;
+  padding: 4px;
+}
+
+.section5 a {
+  position: relative;
+  margin-top: 1rem;
+}
+/* Newsletter */
+
+.newsletter_area {
+  max-width: 100%;
+  font-size: 0.8rem;
+}
+
+.newsletteremail, .newslettersubscribe{
+  font-size: 0.8rem;
+}
+
+
+
+
+}

@@ -1,0 +1,177 @@
+/* Both "your list" & "your favorites" list css code */
+
+html {
+    --dark_purple: #050517;
+    --purple: #2E1B3B;
+    --yellow: #F0C808;
+    --greywhite: #d2d2d2;
+    --white: #f7f7f7;
+}
+body {
+    background-image: url("/images/squareeyes_logo_glasses_big.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 40%;
+    background-position-x: 90%;
+    background-position-y: 30%;
+}
+.h1_text {
+    display: flex;
+    margin: 2rem 0rem 0rem;
+}
+.h1_text figure{
+    padding-right: 0.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+h3 {
+    font-size: 1.1rem;
+}
+
+.your_list_content {
+    max-width: 1500px;
+    display: flex;
+    margin: 0px auto;
+}
+.your_list_movies {
+    width:  100%;
+}
+.your_list_movies h1 {
+    margin: 0px;
+}
+.p_top{
+    margin: 0px;
+    margin-bottom: 3rem;
+    
+}
+.h1_text {
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: start;
+}
+.h1_text h1 {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.paid, .in_list {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+}
+
+.information_box {
+    flex: 1;
+    display: flex;
+    
+    box-shadow: 0px 4px 50px rgba(80, 80, 80, 0.25);
+    border-radius: 8px;
+    align-items: center;
+    max-width: 500px;
+}
+.information_box:hover, .information_box2:hover {
+    box-shadow: 0px 4px 70px 2px rgba(210, 210, 210, 0.2)
+}
+
+.information_text, .information_movie_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem;
+    justify-content: left;
+    color: var(--greywhite);
+}
+.information_elements a {
+    text-decoration: none;
+}
+.information_text h3 {
+    font-size: 1rem;
+    margin: 0px;
+}
+.information_text p {
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin: 0.4rem 0px 0px 0px;
+}
+.information_box_end {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.information_box_end a {
+    text-decoration: none;
+    color: var(--greywhite);
+}
+.figure_rightarrow {
+    display: flex;
+    font-size: 0.8rem;
+}
+.figure_rightarrow p {
+    text-align: end;
+}
+.figure_rightarrow, .figure_x {
+    justify-content: end;
+}
+.rightarrow2, .icon_x {
+    width: auto;
+    padding: 8px;
+    margin: 0px 10px 0px 0px;
+    flex: 1;
+}
+.rightarrow2 {
+    content: url(/icons/icon_rightarrow.png);
+    height: 2rem;
+}
+.figure_rightarrow:hover {
+    transform: scale(1.1) translateX(5px);
+}
+.figure_rightarrow:hover .rightarrow2, {
+    content: url(/icons/icon_rightarrow_hover.png);
+    transform: scale(1.1) translateX(5px);
+}
+.figure_rightarrow .rightarrow2 {
+    margin: 0px 8px;
+}
+.icon_x {
+    content: url(/icons/icon_x.png);
+    height: 1.5rem;
+    padding: 15px 4px 4px 4px;
+}
+.icon_x:hover {
+    content: url(/icons/icon_x_hover.png);
+    transform: scale(1.1);
+}
+
+.movie_cover {
+    max-width: 110px;
+    max-height: 160px;
+    overflow: hidden;
+    margin: 0px;
+}
+.movie_cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 450px) {
+    .paid, .in_list {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 1rem;
+    }
+    .movie_cover {
+        max-width: 70px;
+        max-height: 116px;
+    }
+    .rightarrow2, .icon_x {
+        padding: 1px;
+    }
+    
+}
