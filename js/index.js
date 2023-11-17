@@ -2,13 +2,17 @@
 import { fetchApiSquareEyes } from "./api/squareeyesData.js";
 
 // //files for selected movie pages
-import { fetchApiSelectedMovie } from "./api/selectedMovieData.js";
+//import { fetchApiSelectedMovie } from "./api/selectedMovieData.js";
+import { checkIfOpenMoviepage } from "./utils/checkpage.js";
 
 // display shoppingbag/ checkoutpage
 import {
   displayShoppingBag,
-  handleShopTrash
+  handleShopTrash,
 } from "./components/displayShoppingBag.js";
+
+//display your profile
+import { displayYourMovies } from "./components/displayPaidMovies.js";
 
 // scripts from html and css course
 // // Sign in out page
@@ -19,4 +23,3 @@ import { sendMessageFun } from "./utils/sendMessage.js";
 
 // Search bar on smaller screens
 import { showSearchBar } from "./utils/searchBar.js";
-

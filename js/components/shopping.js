@@ -10,6 +10,7 @@ export function handleClick(event) {
   event.target.classList.toggle("gray");
   event.target.classList.toggle("yellow");
 
+  const currentShopBag = getExistingShopInv();
   const id = this.dataset.id;
   const title = this.dataset.title;
   const image = this.dataset.image;
@@ -19,7 +20,6 @@ export function handleClick(event) {
   const released = this.dataset.released;
   const rating = this.dataset.rating;
   const index = this.dataset.index;
-  const currentShopBag = getExistingShopInv();
 
   const movieProductExists = currentShopBag.find(function (bag) {
     return bag.id === id;

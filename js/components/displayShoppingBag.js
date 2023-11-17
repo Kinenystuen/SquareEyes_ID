@@ -32,7 +32,7 @@ export async function displayShoppingBag() {
     shoppingBagContainer.innerHTML += `<div class="chosen_movie">
                                         <div class="item1">${index + 1}.</div>
                                         <div class="chosen_moviecover">
-                                        <a href="/products/movie_details.html?="${
+                                        <a href="/products/movie_details.html?id=${
                                           shopMovies.id
                                         }">
                                         <img
@@ -42,7 +42,7 @@ export async function displayShoppingBag() {
                                         /></a>
                                     </div>
                                     <div class="movie_details">
-                                        <a href="/products/movie_details.html?="${
+                                        <a href="/products/movie_details.html?id="${
                                           shopMovies.id
                                         }">
                                         <h3>${shopMovies.title}</h3>
@@ -67,7 +67,6 @@ export async function displayShoppingBag() {
     <p>${shopMovies.price}</p></div>`;
 
     totalPrice += parseFloat(shopMovies.price);
-
   });
 
   totalPriceContainer.innerHTML = `${totalPrice} kr`;
@@ -82,23 +81,23 @@ export async function displayShoppingBag() {
 displayShoppingBag();
 
 export function handleShopTrash(event) {
-  const trashCanButtons = document.querySelectorAll(".trashcan");
-  const indexShopBag = Array.from(trashCanButtons).indexOf(event.target);
+  if (event) {
+    const trashCanButtons = document.querySelectorAll(".trashcan");
+    const indexShopBag = Array.from(trashCanButtons).indexOf(event.target);
 
-  // Retrieve the existing shopping bag from local storage
-  const shoppingBag = getExistingShopInv();
-  if (indexShopBag >= 0 && indexShopBag < shoppingBag.length) {
-    // Remove the item from the shopping bag array
-    shoppingBag.splice(indexShopBag, 1);
+    // Retrieve the existing shopping bag from local storage
+    const shoppingBag = getExistingShopInv();
+    if (indexShopBag >= 0 && indexShopBag < shoppingBag.length) {
+      // Remove the item from the shopping bag array
+      shoppingBag.splice(indexShopBag, 1);
 
-    // Update the local storage with the modified shopping bag
-    localStorage.setItem("shoppingBag", JSON.stringify(shoppingBag));
+      // Update the local storage with the modified shopping bag
+      localStorage.setItem("shoppingBag", JSON.stringify(shoppingBag));
 
-    // Update the displayed shopping bag
-    displayShoppingBag();
-    updShoppingBagCount();
-    displayYourMovies();
+      // Update the displayed shopping bag
+      displayShoppingBag();
+      updShoppingBagCount();
+    }
   }
 }
 handleShopTrash();
-

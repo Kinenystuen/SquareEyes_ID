@@ -13,7 +13,6 @@ export async function displayMovies(allMovies) {
   const allMoviesContainer = document.getElementById("allMoviesContainer");
   allMoviesContainer.innerHTML = "";
   for (let i = 0; i < allMovies.length; i++) {
-
     // Code for shopping bag
     let cssShopClass = "gray";
     const doesObjectExist = shoppingBag.find(function (bag) {

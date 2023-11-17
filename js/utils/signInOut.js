@@ -1,4 +1,4 @@
-export async function signInOutButton() {
+export function signInOutButton() {
   const signinButtonOne = document.getElementById("sign_in");
   const signupButtonTwo = document.getElementById("sign_up");
   const SectionOne = document.getElementById("section_signin");

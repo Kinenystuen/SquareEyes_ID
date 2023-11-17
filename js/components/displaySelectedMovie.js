@@ -5,7 +5,7 @@ const movieDetailContainer = document.getElementById("movieDetailContainer");
 export function displaySelectedMovie(movieInfo) {
   document.title = "SquareEyes | " + `${movieInfo.title}`;
   if (movieInfo.id) {
-  movieDetailContainer.innerHTML = `<section class="content_wrap" id="movieImage">
+    movieDetailContainer.innerHTML = `<section class="content_wrap" id="movieImage">
   <img class="movieImage" src="${movieInfo.image}"/>
   <div class="headerpic_gradient">
       <div class="content_wrap ">
@@ -57,8 +57,7 @@ export function displaySelectedMovie(movieInfo) {
       </div>
   </div>
 </section>`;
-}
-else {
+  } else {
     movieDetailContainer.innerHTML = `Sorry we could not access the id of the movie`;
-}
+  }
 }

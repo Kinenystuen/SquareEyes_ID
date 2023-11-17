@@ -1,4 +1,5 @@
 import { displaySelectedMovie } from "../components/displaySelectedMovie.js";
+import { checkIfOpenMoviepage } from "../utils/checkpage.js";
 
 // Finds the id in the queryString
 const queryString = document.location.search;
@@ -18,8 +19,8 @@ export async function fetchApiSelectedMovie() {
     const jsonSM = await responseSM.json();
     movieInfo = jsonSM;
     displaySelectedMovie(movieInfo);
+    return movieInfo;
   } catch (error) {
     console.log("Error selectedMovie: " + error);
   }
 }
-fetchApiSelectedMovie();

@@ -6,11 +6,11 @@ export function showSearchBar() {
   menu_search_icon_button.addEventListener("click", function () {
     if (search_bar_area.style.display === "none") {
       search_bar_area.style.display = "block";
+      console.log("Clicked");
     } else {
       search_bar_area.style.display = "none";
     }
   });
-
 }
 
 showSearchBar();
