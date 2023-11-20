@@ -7,22 +7,28 @@ export function displayYourMovies() {
     "purchase_movies_container"
   );
   let paidMovies = JSON.parse(localStorage.getItem("paidMovies")) || [];
-  paidMovies.forEach((movies) => {
-    purchase_movies_container.innerHTML += `
-                        <div class="information_box2">
-                          <a href="/products/movie_details.html?id=${movies.id}" class="movie_cover"
-                            ><img src="${movies.image}" alt="${movies.title} cover"
-                            /></a>
-                            <div class="information_movie_text">
-                            <h4>${movies.title}</h4>
-                            </div>
-                            <a href="#" class="profile_watch_now"
-                            >Watch now
-                            <figure class="rightarrow2"></figure
-                            ></a>
-                            </div>
-  `;
-  });
+  if (Array.isArray(paidMovies)) {
+    paidMovies.forEach((movies) => {
+      purchase_movies_container.innerHTML += `
+                          <div class="information_box2">
+                            <a href="/products/movie_details.html?id=${movies.id}" class="movie_cover"
+                              ><img src="${movies.image}" alt="${movies.title} cover"
+                              /></a>
+                              <div class="information_movie_text">
+                              <h4>${movies.title}</h4>
+                              </div>
+                              <a href="#" class="profile_watch_now"
+                              >Watch now
+                              <figure class="rightarrow2"></figure
+                              ></a>
+                              </div>
+    `;
+    });
+  }
+    else {
+      console.log("this is not an array")
+    }
+  
 }
 displayYourMovies();
 
@@ -31,17 +37,15 @@ function handlePayClick() {
   let paidMovies = JSON.parse(localStorage.getItem("paidMovies")) || [];
 
   // Move items from shoppingBag to paidMovies
-  paidMovies = paidMovies.concat(shoppingBag);
+  paidMovies = paidMovies.push(shoppingBag);
 
   // Clear shoppingBag
-  shoppingBag = [];
+  //shoppingBag = [];
 
   // Update local storage with the modified arrays
   localStorage.setItem("shoppingBag", JSON.stringify(shoppingBag));
   localStorage.setItem("paidMovies", JSON.stringify(paidMovies));
 
   // After processing, display the updated movies
-  displayYourMovies();
 }
-
 paynowButton.addEventListener("click", handlePayClick);
