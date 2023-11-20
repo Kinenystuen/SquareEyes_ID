@@ -616,106 +616,25 @@ html {
   display: flex;
   gap: 1rem;
   padding: 10px 0px;
+  margin-bottom: 1.2rem;
   width: fit-content;
-  height: 1.8rem;
 }
 /* didn't fine any way for this to be a collab */
 .icon_heart {
   content: url(/icons/icon_heart.svg);
+  height: 1.8rem;
+  margin: auto;
 }
-
-#favorites1:checked ~.icon_heart {
-  content: url(/icons/icon_heart_checked.png);
-}
-#favorites2:checked ~.icon_heart {
-  content: url(/icons/icon_heart_checked.png);
-}
-#favorites3:checked ~.icon_heart {
-  content: url(/icons/icon_heart_checked.png);
-}
-#favorites4:checked ~.icon_heart {
-  content: url(/icons/icon_heart_checked.png);
-}
-#favorites5:checked ~.icon_heart {
-  content: url(/icons/icon_heart_checked.png);
-}
-#favorites6:checked ~.icon_heart {
-  content: url(/icons/icon_heart_checked.png);
-}
-#favorites7:checked ~.icon_heart {
-  content: url(/icons/icon_heart_checked.png);
-}
-#favorites8:checked ~.icon_heart {
-  content: url(/icons/icon_heart_checked.png);
-}
-
 
 .icon_pluss {
   content: url(/icons/icon_pluss.svg);
-}
-#your_list1:checked ~.icon_pluss {
-  content: url(/icons/icon_pluss_added.png);
-  height: 1.5rem;
+  height: 1.8rem;
   margin: auto;
 }
-#your_list2:checked ~.icon_pluss {
-  content: url(/icons/icon_pluss_added.png);
-  height: 1.5rem;
-  margin: auto;
+.icon_heart:hover, .icon_pluss:hover {
+  filter: drop-shadow(0px 0px 12.899999618530273px rgba(255, 255, 255, 0.75));
+  
 }
-#your_list3:checked ~.icon_pluss {
-  content: url(/icons/icon_pluss_added.png);
-  height: 1.5rem;
-  margin: auto;
-}
-#your_list4:checked ~.icon_pluss {
-  content: url(/icons/icon_pluss_added.png);
-  height: 1.5rem;
-  margin: auto;
-}
-#your_list5:checked ~.icon_pluss {
-  content: url(/icons/icon_pluss_added.png);
-  height: 1.5rem;
-  margin: auto;
-}
-#your_list6:checked ~.icon_pluss {
-  content: url(/icons/icon_pluss_added.png);
-  height: 1.5rem;
-  margin: auto;
-}
-#your_list7:checked ~.icon_pluss {
-  content: url(/icons/icon_pluss_added.png);
-  height: 1.5rem;
-  margin: auto;
-}
-#your_list8:checked ~.icon_pluss {
-  content: url(/icons/icon_pluss_added.png);
-  height: 1.5rem;
-  margin: auto;
-}
-
-#favorites1, #favorites2,#favorites3,#favorites4,#favorites5,#favorites6,#favorites7,#favorites8, #your_list1, #your_list2, #your_list3 ,#your_list4,#your_list5,#your_list6,#your_list7,#your_list8, #shopping_bag_button1, #shopping_bag_button2, #shopping_bag_button3, #shopping_bag_button4, #shopping_bag_button5, #shopping_bag_button6, #shopping_bag_button7, #shopping_bag_button8{
-  display: none;
-}
-
-/* shopping bag */
-#shopping_bag_button1:checked ~ .shopping_bag_button {background-color: var(--yellow);}
-#shopping_bag_button1:checked  ~ .shopping_bag_button::before {content: 'Added';}
-#shopping_bag_button2:checked ~ .shopping_bag_button {background-color: var(--yellow);}
-#shopping_bag_button2:checked  ~ .shopping_bag_button::before {content: 'Added';}
-#shopping_bag_button3:checked ~ .shopping_bag_button {background-color: var(--yellow);}
-#shopping_bag_button3:checked  ~ .shopping_bag_button::before {content: 'Added';}
-#shopping_bag_button4:checked ~ .shopping_bag_button {background-color: var(--yellow);}
-#shopping_bag_button4:checked  ~ .shopping_bag_button::before {content: 'Added';}
-#shopping_bag_button5:checked ~ .shopping_bag_button {background-color: var(--yellow);}
-#shopping_bag_button5:checked  ~ .shopping_bag_button::before {content: 'Added';}
-#shopping_bag_button6:checked ~ .shopping_bag_button {background-color: var(--yellow);}
-#shopping_bag_button6:checked  ~ .shopping_bag_button::before {content: 'Added';}
-#shopping_bag_button7:checked ~ .shopping_bag_button {background-color: var(--yellow);}
-#shopping_bag_button7:checked  ~ .shopping_bag_button::before {content: 'Added';}
-#shopping_bag_button8:checked ~ .shopping_bag_button {background-color: var(--yellow);}
-#shopping_bag_button8:checked  ~ .shopping_bag_button::before {content: 'Added';}
-
 
 
 /*

@@ -21,7 +21,10 @@ export function displaySelectedMovie(movieInfo) {
               <p class="movie_price">${movieInfo.price} kr</p>
               <div class="button_icon_area">
                   <div class="watchButtonArea"></div>
-                  
+                  <div class="icons">
+                <i class="icon_heart" aria-label="Save to your favorites"></i>
+                <i class="icon_pluss" aria-label="Save to your list"></i>
+            </div>
               </div>
               
               <div class="shoppingbag_options">

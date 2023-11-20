@@ -39,7 +39,8 @@ export async function displayMovies(allMovies) {
                                             </p>
                                             <p class="movie_price">${allMovies[i].price} kr</p>
                                             <div class="icons">
-                                            
+                                              <i class="icon_heart" aria-label="Save to your favorites"></i>
+                                              <i class="icon_pluss" aria-label="Save to your list"></i>
                                             </div>
                                             <div class="buttons">
                                             <a
