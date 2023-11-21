@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
       rel="stylesheet"
     />
-    <script type="module" defer src="js/index.js"></script>
+    <script type="module" src="js/index.js" defer></script>
     <title>SquareEyes | Your favorites</title>
     <!-- Hotjar Tracking Code for https://squareeyes-id.netlify.app/ -->
     <script>
@@ -109,8 +109,11 @@
           <p class="p_top">Your favorite movies</p>
 
           <h2 class="gone_text">In list</h2>
-          <div class="in_list">
-            <div class="information_box">
+          <div class="in_list" id="favoritesBagContainer">
+            <div class="loader_area">
+              <div class="loader"></div>
+            </div>
+            <!-- <div class="information_box">
               <a href="/products/batman-movie-page.html" class="movie_cover"
                 ><img
                   src="/images/Movie_hollywood.jpeg"
@@ -134,57 +137,8 @@
                   ></figure>
                 </div>
               </div>
-            </div>
-            <div class="information_box">
-              <a href="/products/batman-movie-page.html" class="movie_cover"
-                ><img
-                  src="/images/Movie_godzilla.jpeg"
-                  alt="Godzilla movie cover"
-              /></a>
-              <div class="information_text">
-                <h3>Godzilla</h3>
-              </div>
-              <div class="information_box_end">
-                <a href="/products/batman-movie-page.html">
-                  <div class="figure_rightarrow">
-                    <p>Rent now</p>
-                    <figure class="rightarrow2"></figure>
-                  </div>
-                </a>
-                <div class="figure_x">
-                  <figure
-                    class="icon_x"
-                    aria-label="Remove from list"
-                    title="Remove from list"
-                  ></figure>
-                </div>
-              </div>
-            </div>
-            <div class="information_box">
-              <a href="/products/batman-movie-page.html" class="movie_cover"
-                ><img
-                  src="/images/Movie_addams_family.jpeg"
-                  alt="The Addams Family movie cover" /><span></span
-              ></a>
-              <div class="information_text">
-                <h3>The Addams Family</h3>
-              </div>
-              <div class="information_box_end">
-                <a href="/products/batman-movie-page.html">
-                  <div class="figure_rightarrow">
-                    <p>Rent now</p>
-                    <figure class="rightarrow2"></figure>
-                  </div>
-                </a>
-                <div class="figure_x">
-                  <figure
-                    class="icon_x"
-                    aria-label="Remove from list"
-                    title="Remove from list"
-                  ></figure>
-                </div>
-              </div>
-            </div>
+            </div> -->
+            
           </div>
         </div>
       </section>

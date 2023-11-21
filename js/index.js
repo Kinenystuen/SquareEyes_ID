@@ -11,6 +11,9 @@ import {
   handleShopTrash,
 } from "./components/displayShoppingBag.js";
 
+// display favoritesBag
+import { displayFavoritesBag } from "./components/displayFavorites.js";
+
 //display your profile
 import { displayYourMovies } from "./components/displayPaidMovies.js";
 

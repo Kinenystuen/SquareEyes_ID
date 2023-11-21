@@ -117,11 +117,16 @@ h3 {
 .figure_rightarrow, .figure_x {
     justify-content: end;
 }
+.figure_x {
+    height: 3rem;
+    width: 3rem;
+}
 .rightarrow2, .icon_x {
     width: auto;
     padding: 8px;
     margin: 0px 10px 0px 0px;
-    flex: 1;
+    display: flex;
+    align-items: center;
 }
 .rightarrow2 {
     content: url(/icons/icon_rightarrow.png);
@@ -139,7 +144,8 @@ h3 {
 }
 .icon_x {
     content: url(/icons/icon_x.png);
-    height: 1.5rem;
+    height: 3rem;
+    width: fit-content;
     padding: 15px 4px 4px 4px;
 }
 .icon_x:hover {

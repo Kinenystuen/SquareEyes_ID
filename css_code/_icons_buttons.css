@@ -38,6 +38,36 @@
     margin: 0px 2px;
     color: var(--dark_purple);
   }
+  .shoppingBagButtonSelMovie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;   
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    text-transform: uppercase;
+    margin: 0px 2px;
+    color: var(--dark_purple);
+    background-color: var(--greywhite);
+  }
+  .shoppingBagButtonSelMovie a:hover,
+.shoppingBagButtonSelMovie:hover {
+    font-weight: 600;
+    background-color: #d2d2d2;
+}
+/* shopping bag */
+.sizeFit {
+  height: 1.5rem;
+  width: fit-content;
+}
+
+button.playbutton,
+.shoppingBagButtonSelMovie {
+  height: 2.6rem;
+  align-items: center;
+  padding: 1rem;
+}
   
 
   /* nav right */

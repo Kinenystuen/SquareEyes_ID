@@ -1,6 +1,8 @@
 import { fetchApiSquareEyes } from "../api/squareeyesData.js";
 import { handleClick } from "./shopping.js";
+import { handleClickFav } from "./favorites.js";
 import { getExistingShopInv } from "../utils/shopFunctions.js";
+import { getExistingFavInv } from "../utils/favFunctions.js";
 
 /*///////////////////////////////
 Display all movies
@@ -8,6 +10,7 @@ Display all movies
 
 // fetching existing shoppingbag inventory
 const shoppingBag = getExistingShopInv();
+const favoritesBag = getExistingFavInv();
 
 export async function displayMovies(allMovies) {
   const allMoviesContainer = document.getElementById("allMoviesContainer");
@@ -20,6 +23,14 @@ export async function displayMovies(allMovies) {
     });
     if (doesObjectExist) {
       cssShopClass = "yellow";
+    }
+    // Code for shopping bag
+    let cssFavClass = "icon_heart";
+    const doesFavObjectExist = favoritesBag.find(function (bag) {
+      return parseInt(bag.id) === parseInt(allMovies[i].id);
+    });
+    if (doesFavObjectExist) {
+      cssFavClass = "icon_heart_checked";
     }
 
     allMoviesContainer.innerHTML += `
@@ -39,7 +50,9 @@ export async function displayMovies(allMovies) {
                                             </p>
                                             <p class="movie_price">${allMovies[i].price} kr</p>
                                             <div class="icons">
-                                              <i class="icon_heart" aria-label="Save to your favorites"></i>
+                                            <div class="favoritesBagButton">
+                                              <i class="icon_heart  ${cssFavClass}" aria-label="Save to your favorites" add" data-id="${allMovies[i].id}" data-title="${allMovies[i].title}" data-image="${allMovies[i].image}" data-description="${allMovies[i].description}" data-price="${allMovies[i].price}" data-discountedPrice="${allMovies[i].discountedPrice}" data-rating="${allMovies[i].rating}" data-genre="${allMovies[i].genre}" data-index="${allMovies[i].index}"  data-favorite="${allMovies[i].favorite}"></i>
+                                              </div>
                                               <i class="icon_pluss" aria-label="Save to your list"></i>
                                             </div>
                                             <div class="buttons">
@@ -58,9 +71,14 @@ export async function displayMovies(allMovies) {
                                     `;
   }
   const shopBagButtons = document.querySelectorAll(".shopping_bag_button");
+  const iconHeartButtons = document.querySelectorAll(".icon_heart");
 
   // Event listener for shopping bag
   shopBagButtons.forEach((button) => {
     button.addEventListener("click", handleClick);
+  });
+  // Event listener for shopping bag
+  iconHeartButtons.forEach((button) => {
+    button.addEventListener("click", handleClickFav);
   });
 }

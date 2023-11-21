@@ -619,9 +619,14 @@ html {
   margin-bottom: 1.2rem;
   width: fit-content;
 }
-/* didn't fine any way for this to be a collab */
+/* didn't find any way for this to be a collab */
 .icon_heart {
   content: url(/icons/icon_heart.svg);
+  height: 1.8rem;
+  margin: auto;
+}
+.icon_heart_checked {
+  content: url(/icons/icon_heart_checked.png);
   height: 1.8rem;
   margin: auto;
 }
