@@ -24,7 +24,7 @@ export async function displayMovies(allMovies) {
     if (doesObjectExist) {
       cssShopClass = "yellow";
     }
-    // Code for shopping bag
+    // Code for favorites bag
     let cssFavClass = "icon_heart";
     const doesFavObjectExist = favoritesBag.find(function (bag) {
       return parseInt(bag.id) === parseInt(allMovies[i].id);

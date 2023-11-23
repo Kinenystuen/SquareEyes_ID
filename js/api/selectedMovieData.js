@@ -5,13 +5,14 @@ import { handleClickSelMovie } from "../components/shoppingSelMovie.js";
 // Finds the id in the queryString
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-export const idSelectedMovie = params.get("id");
+const idSelectedMovie = params.get("id");
 
 const urlId = `https://api.noroff.dev/api/v1/square-eyes/` + idSelectedMovie;
 
 let movieInfo;
 export async function fetchApiSelectedMovie() {
   try {
+    let movieInfo;
     const responseSM = await fetch(urlId);
     // If the url is wrong, then this (throw new Error) will make an error
     if (!responseSM.ok) {
@@ -20,8 +21,8 @@ export async function fetchApiSelectedMovie() {
     const jsonSM = await responseSM.json();
     movieInfo = jsonSM;
     displaySelectedMovie(movieInfo);
+    handleClickSelMovie(event, movieInfo);
 
-    return movieInfo;
   } catch (error) {
     console.log("Error selectedMovie: " + error);
   }

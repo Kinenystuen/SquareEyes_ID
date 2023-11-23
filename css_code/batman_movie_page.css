@@ -75,10 +75,9 @@ h2 {
 .playbutton {
     font-family: 'montserrat', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
+    display: flex;
     background-color: var(--yellow);
     color: var(--dark_purple);
-    padding: 8px 12.5px;
-    width: fit-content;
     border-radius: 5px;
     border: none;
     box-sizing: border-box;
@@ -86,7 +85,6 @@ h2 {
 
 .playbutton:hover {
     font-weight: 600;
-    padding: 8px;
 }
 
 
@@ -242,17 +240,13 @@ h2 {
         font-size: 1.2rem;
     }
 
-    .playbutton:hover {
-        font-weight: 600;
-        padding: 8px;
-    }
 
     /* shopping bag */
     .shopping_bag_button::before {
         content: "Add";
     }
 
-    button.playbutton,
+    
     .shopping_bag_button {
         height: 2.6rem;
         align-items: center;
@@ -318,13 +312,10 @@ h2 {
         margin: 8px;
     }
 
-    .playbutton {
-        padding: 0px 8px;
-    }
-
+/* 
     .playbutton:hover {
         padding: 0px 4.3px;
-    }
+    } */
 
     .buttons label a {
         padding: 0px;

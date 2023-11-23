@@ -3,24 +3,26 @@ import { fetchApiSelectedMovie } from "../api/selectedMovieData.js";
 import { displaySelectedMovie } from "./displaySelectedMovie.js";
 import { getExistingShopInv } from "../utils/shopFunctions.js";
 import { updShoppingBagCount } from "./displayShopCount.js";
-import { idSelectedMovie } from "../api/selectedMovieData.js";
 
 
+const shoppingBag = getExistingShopInv();
 
-export function handleClickSelMovie(event) {
+export function handleClickSelMovie(event, movieInfo) {
+  console.log(movieInfo.id)
   event.target.classList.toggle("gray");
   event.target.classList.toggle("yellow");
 
   const currentShopBag = getExistingShopInv();
-  const id = idSelectedMovie;
-  const title = this.dataset.title;
-  const image = this.dataset.image;
-  const genre = this.dataset.genre;
-  const price = this.dataset.price;
-  const discountedPrice = this.dataset.discountedPrice;
-  const released = this.dataset.released;
-  const rating = this.dataset.rating;
-  const index = this.dataset.index;
+  console.log(currentShopBag)
+  const id = movieInfo.id;
+    const title = movieInfo.title;
+    const image = movieInfo.image;
+    const genre = movieInfo.genre;
+    const price = movieInfo.price;
+    const discountedPrice = movieInfo.discountedPrice;
+    const released = movieInfo.released;
+    const rating = movieInfo.rating;
+    const index = movieInfo.index;
 
   const movieProductExists = currentShopBag.find(function (bag) {
     return bag.id === id;

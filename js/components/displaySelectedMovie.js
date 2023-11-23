@@ -41,7 +41,7 @@ export function displaySelectedMovie(movieInfo) {
                 <i class="icon_pluss" aria-label="Save to your list"></i>
             </div>          
           </div>
-        <div class="shopBagButton"><div class="shoppingBagButtonSelMovie ${cssShopClass} add" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}" aria-label="Add to shopping bag"><span class="shopping_bag_icon sizeFit"></span></div></div>
+        <div class="shopBagButton"><div class="shoppingBagButtonSelMovie ${cssShopClass}" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}" aria-label="Add to shopping bag"><span class="shopping_bag_icon sizeFit"></span></div></div>
       </div>
   </div>
 </section>
@@ -74,7 +74,8 @@ const shopBagButtons = document.querySelectorAll(".shopBagButton");
 
 // Event listener for shopping bag
 shopBagButtons.forEach((button) => {
-    button.addEventListener("click", handleClickSelMovie);
+    //button.addEventListener("click", handleClickSelMovie);
+    button.addEventListener("click", (event) => handleClickSelMovie(event, movieInfo));
   });
   } else {
     movieDetailContainer.innerHTML = `Sorry we could not access the id of the movie`;
