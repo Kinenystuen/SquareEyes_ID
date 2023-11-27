@@ -20,6 +20,7 @@ export function handleClick(event) {
   const released = this.dataset.released;
   const rating = this.dataset.rating;
   const index = this.dataset.index;
+  const favorite = this.dataset.favorite;
 
   const movieProductExists = currentShopBag.find(function (bag) {
     return bag.id === id;
@@ -35,6 +36,7 @@ export function handleClick(event) {
       released: released,
       rating: rating,
       index: index,
+      favorite: favorite,
     };
     currentShopBag.push(movieProduct);
     saveShopBag(currentShopBag);

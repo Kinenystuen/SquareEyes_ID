@@ -22,6 +22,8 @@ export async function fetchApiSelectedMovie() {
     movieInfo = jsonSM;
     displaySelectedMovie(movieInfo);
     handleClickSelMovie(event, movieInfo);
+    handleClickFavMovie(event, movieInfo);
+
 
   } catch (error) {
     console.log("Error selectedMovie: " + error);

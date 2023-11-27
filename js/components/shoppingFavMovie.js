@@ -1,17 +1,17 @@
 //
 import { fetchApiSelectedMovie } from "../api/selectedMovieData.js";
 import { displaySelectedMovie } from "./displaySelectedMovie.js";
-import { getExistingShopInv } from "../utils/shopFunctions.js";
-import { updShoppingBagCount } from "./displayShopCount.js";
+import { getExistingFavInv } from "../utils/favFunctions.js";
 
 
-const shoppingBag = getExistingShopInv();
+const favoritesBag = getExistingFavInv();
 
-export function handleClickSelMovie(event, movieInfo) {
-  event.target.classList.toggle("gray");
-  event.target.classList.toggle("yellow");
+export function handleClickFavMovie(event, movieInfo) {
+  console.log(movieInfo.id)
+  event.target.classList.toggle("icon_heart");
+  event.target.classList.toggle("icon_heart_checked");
 
-  const currentShopBag = getExistingShopInv();
+  const currentFavBag = getExistingFavInv();
   const id = movieInfo.id;
     const title = movieInfo.title;
     const image = movieInfo.image;
@@ -22,9 +22,8 @@ export function handleClickSelMovie(event, movieInfo) {
     const rating = movieInfo.rating;
     const index = movieInfo.index;
     const favorite = movieInfo.favorite;
-    
 
-  const movieProductExists = currentShopBag.find(function (bag) {
+  const movieProductExists = currentFavBag.find(function (bag) {
     return bag.id === id;
   });
   if (movieProductExists === undefined) {
@@ -40,16 +39,14 @@ export function handleClickSelMovie(event, movieInfo) {
       index: index,
       favorite: favorite,
     };
-    currentShopBag.push(movieProduct);
-    saveShopBag(currentShopBag);
+    currentFavBag.push(movieProduct);
+    saveFavBag(currentFavBag);
   } else {
-    const newShopMovie = currentShopBag.filter((bag) => bag.id !== id);
-    saveShopBag(newShopMovie);
+    const newFavMovie = currentFavBag.filter((bag) => bag.id !== id);
+    saveFavBag(newFavMovie);
   }
-
-  updShoppingBagCount();
 }
 
-function saveShopBag(shopBag) {
-  localStorage.setItem("shoppingBag", JSON.stringify(shopBag));
+function saveFavBag(favBag) {
+  localStorage.setItem("favoritesBag", JSON.stringify(favBag));
 }

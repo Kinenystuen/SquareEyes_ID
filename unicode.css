@@ -38,6 +38,10 @@ html {
     margin-top: 5rem;
   }
 
+  .pointer {
+    cursor: pointer;
+  }
+
   input,
   label,
   textarea {
@@ -98,6 +102,12 @@ html {
     border: none;
     box-shadow: none;
     outline: none;
+  }
+
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   /* /////// Header code //////////*/
@@ -201,22 +211,13 @@ html {
    .icon_favorites_nav {
     content: url(/icons/icon_heart_nav.png);
   }
-  .icon_favorites_nav:hover {
-    content: url(/icons/icon_heart_nav_hover.png);
-  }
 
   .icon_your_list_nav {
     content: url(/icons/icon_pluss_nav.svg);
   }
-  .icon_your_list_nav:hover {
-    content: url(/icons/icon_pluss_nav_hover.png);
-  }
 
   .icon_shopping_bag_nav {
     content: url(/icons/icon_shopping_bag_nav.png);
-  }
-  .icon_shopping_bag_nav:hover {
-    content: url(/icons/icon_shopping_bag_nav_hover.png);
   }
   .icon_shopping_bag_one_item {
     content: url(/icons/icon_shopping_bag_one_item.png);
@@ -224,9 +225,6 @@ html {
 
   .icon_profile_nav {
     content: url(/icons/icon_profile.png);
-  }
-  .icon_profile_nav:hover {
-    content: url(/icons/icon_profile_hover.png);
   }
   .icon_settings_wheel {
     content: url(/icons/icon_settings_wheel.png);
@@ -511,20 +509,11 @@ html {
   .instagram {
     content: url(/icons/icon_instagram.svg);
   }
-  .instagram:hover {
-      content: url(/icons/icon_instagram_hover.svg);
-  }
   .twitter {
       content: url(/icons/icon_twitter.svg);
   }
-  .twitter:hover {
-      content: url(/icons/icon_twitter_hover.svg);
-  }
   .facebook {
       content: url(/icons/icon_facebook.svg);
-  }
-  .facebook:hover {
-      content: url(/icons/icon_facebook_hover.svg);
   }
  
 /* Section6 - Supporting small filmmakers */
@@ -678,6 +667,11 @@ code to hide sign up at first
   display: none;
 }
 
+
+button {
+  background-color: var(--dark_purple);
+  columns: var(--greywhite);
+}
 
 
 

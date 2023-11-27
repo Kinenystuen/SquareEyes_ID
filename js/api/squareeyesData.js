@@ -17,6 +17,7 @@ export async function fetchApiSquareEyes() {
     displayMovies(allMovies);
     displaySugMovies(randomData);
     displayPopularMovie(allMovies);
+    console.log(allMovies);
     return allMovies;
   } catch (error) {
     console.log(error);

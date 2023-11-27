@@ -1,13 +1,15 @@
 import { fetchApiSelectedMovie } from "../api/selectedMovieData.js";
 import { handleClickSelMovie } from "./shoppingSelMovie.js"; 
+import { handleClickFavMovie } from "./shoppingFavMovie.js";
 import { getExistingShopInv } from "../utils/shopFunctions.js";
+import { getExistingFavInv } from "../utils/favFunctions.js";
 const shoppingBag = getExistingShopInv();
+const favoritesBag = getExistingFavInv();
 
 const movieDetailContainer = document.getElementById("movieDetailContainer");
 
 export function displaySelectedMovie(movieInfo) {
   document.title = "SquareEyes | " + `${movieInfo.title}`;
-  console.log(movieInfo.id)
   if (movieInfo.id) {
     // Code for shopping bag
     let cssShopClass = "gray";
@@ -17,9 +19,17 @@ export function displaySelectedMovie(movieInfo) {
     if (doesObjectExist) {
       cssShopClass = "yellow";
     }
+    // Code for favorites bag
+    let cssFavClass = "icon_heart";
+    const doesFavObjectExist = favoritesBag.find(function (bag) {
+      return parseInt(bag.id) === parseInt(movieInfo.id);
+    });
+    if (doesFavObjectExist) {
+      cssFavClass = "icon_heart_checked";
+    }
 
 
-    movieDetailContainer.innerHTML = `<section class="content_wrap" id="movieImage">
+    movieDetailContainer.innerHTML = `<section class="" id="movieImage">
   <img class="movieImage" src="${movieInfo.image}"/>
   <div class="headerpic_gradient">
       <div class="content_wrap ">
@@ -36,12 +46,13 @@ export function displaySelectedMovie(movieInfo) {
               <div class="button_icon_area">
                   <div class="watchButtonArea">
                   <button id="playbutton" class="playbutton" tabindex="0" onclick="watchtrailer()">Watch trailer</button></div>
-                  <div class="icons">
-                <i class="icon_heart" aria-label="Save to your favorites"></i>
-                <i class="icon_pluss" aria-label="Save to your list"></i>
+                  <div class="icons iconsSelPage">
+                    <div class="favoritesBagButton"><i class="icon_heart  ${cssFavClass}" aria-label="Save to your favorites" add" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}"  data-favorite="${movieInfo.favorite}"></i>
+                  </div>
+                  <i class="icon_pluss" aria-label="Save to your list"></i>
             </div>          
           </div>
-        <div class="shopBagButton"><div class="shoppingBagButtonSelMovie ${cssShopClass}" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}" aria-label="Add to shopping bag"><span class="shopping_bag_icon sizeFit"></span></div></div>
+        <div class="shopBagButton"><div class="shoppingBagButtonSelMovie ${cssShopClass}" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}" data-favorite="${movieInfo.favorite}" aria-label="Add to shopping bag"><span class="shopping_bag_icon sizeFit"></span></div></div>
       </div>
   </div>
 </section>
@@ -67,17 +78,28 @@ export function displaySelectedMovie(movieInfo) {
           <span>${movieInfo.rating}</span>
       </div>
   </div>
-</section>`;
+</section>
+<section class="moviephotos_section content_wrap">
+            <h2>Photos:</h2>
+            <div class="photos_from_movie">
+                <img src="${movieInfo.image}" alt="${movieInfo.title} cover image ">
+            </div>
+        </section>
+`;
 
 
 const shopBagButtons = document.querySelectorAll(".shopBagButton");
+
 
 // Event listener for shopping bag
 shopBagButtons.forEach((button) => {
     //button.addEventListener("click", handleClickSelMovie);
     button.addEventListener("click", (event) => handleClickSelMovie(event, movieInfo));
   });
-  } else {
-    movieDetailContainer.innerHTML = `Sorry we could not access the id of the movie`;
-  }
+}
+const favoritesBagButton = document.querySelectorAll(".favoritesBagButton");
+favoritesBagButton.forEach((button) => {
+    //button.addEventListener("click", handleClickSelMovie);
+    button.addEventListener("click", (event) => handleClickFavMovie(event, movieInfo));
+  });
 }

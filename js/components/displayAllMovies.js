@@ -51,17 +51,17 @@ export async function displayMovies(allMovies) {
                                             <p class="movie_price">${allMovies[i].price} kr</p>
                                             <div class="icons">
                                             <div class="favoritesBagButton">
-                                              <i class="icon_heart  ${cssFavClass}" aria-label="Save to your favorites" add" data-id="${allMovies[i].id}" data-title="${allMovies[i].title}" data-image="${allMovies[i].image}" data-description="${allMovies[i].description}" data-price="${allMovies[i].price}" data-discountedPrice="${allMovies[i].discountedPrice}" data-rating="${allMovies[i].rating}" data-genre="${allMovies[i].genre}" data-index="${allMovies[i].index}"  data-favorite="${allMovies[i].favorite}"></i>
+                                              <i class="icon_heart pointer ${cssFavClass}" aria-label="Save to your favorites" title="Add to favorites" data-id="${allMovies[i].id}" data-title="${allMovies[i].title}" data-image="${allMovies[i].image}" data-description="${allMovies[i].description}" data-price="${allMovies[i].price}" data-discountedPrice="${allMovies[i].discountedPrice}" data-rating="${allMovies[i].rating}" data-genre="${allMovies[i].genre}" data-index="${allMovies[i].index}"  data-favorite="${allMovies[i].favorite}"></i>
                                               </div>
-                                              <i class="icon_pluss" aria-label="Save to your list"></i>
+                                              <i class="icon_pluss pointer" aria-label="Save to your list"></i>
                                             </div>
-                                            <div class="buttons">
+                                            <div class="buttons pointer">
                                             <a
                                                 href="/products/movie_details.html?id=${allMovies[i].id}"
                                                 class="more_info_button"
                                                 >More info</a>
                                              <div class="shoppingBagButton"> 
-                                                <i class="shopping_bag_button ${cssShopClass} add" data-id="${allMovies[i].id}" data-title="${allMovies[i].title}" data-image="${allMovies[i].image}" data-description="${allMovies[i].description}" data-price="${allMovies[i].price}" data-discountedPrice="${allMovies[i].discountedPrice}" data-rating="${allMovies[i].rating}" data-genre="${allMovies[i].genre}" data-index="${allMovies[i].index}">
+                                                <i class="shopping_bag_button ${cssShopClass} add" title="Add to shoppingcart" data-id="${allMovies[i].id}" data-title="${allMovies[i].title}" data-image="${allMovies[i].image}" data-description="${allMovies[i].description}" data-price="${allMovies[i].price}" data-discountedPrice="${allMovies[i].discountedPrice}" data-rating="${allMovies[i].rating}" data-genre="${allMovies[i].genre}" data-index="${allMovies[i].index}" data-favorite="${allMovies[i].favorite}">
                                                  <span class="shopping_bag"></span></i>
                                             </div>
                                             </div>
@@ -82,3 +82,12 @@ export async function displayMovies(allMovies) {
     button.addEventListener("click", handleClickFav);
   });
 }
+
+// // Creating genre buttons
+// document.getElementById("genreButtons").addEventListener("click", function (event) {
+//   if (event.target.tagName === "BUTTON") {
+//     const selectedGenre = event.target.dataset.genre;
+//     displayMoviesByGenre(selectedGenre);
+//   }
+// });
+
