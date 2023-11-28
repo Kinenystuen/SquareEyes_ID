@@ -110,26 +110,42 @@
     </header>
     <main class="content_wrap main_h">
       <h1>Movies</h1>
+      <!-- <div id="buttons-container">
+        Create buttons for each genre 
+          <button class="cat-button" id="all-btn">All</button> 
+          <button class="cat-button" id="action-btn">Action</button>
+          <button class="cat-button" id="kids-btn">Kids</button>
+          <button class="cat-button" id="horror-btn">Horror</button>
+          <button class="cat-button" id="drama-btn">Drama</button>
+          <button class="cat-button" id="comedy-btn">Comedy</button>
+        Add more genre buttons as needed
+      </div> -->
       <div class="movie_org">
+        <!-- <div id="buttons-container">
+          <button class="cat-button" id="all-btn">All</button>
+          <button class="cat-button" id="action-btn">Action</button>
+          <button class="cat-button" id="kids-btn">Kids</button>
+          <button class="cat-button" id="horror-btn">Horror</button>
+          <button class="cat-button" id="drama-btn">Drama</button>
+          <button class="cat-button" id="comedy-btn">Comedy</button>
+        </div> -->
         <input
           type="checkbox"
           name="moviemenu_checkbox"
           id="moviemenu_checkbox"
         />
         <nav class="movie_nav">
-          <ul id="genreButtons">
+          <ul id="buttons-container">
             <li>
-              <label for="moviemenu_checkbox" class="categories"
-                ><span class="gone_text">Show movie categories</span>Categories
-                - All</label
-              >
+              <label for="moviemenu_checkbox" class="categories" id="selectedCategory"
+                ><span class="gone_text">Show movie categories</span>Categories:</label>
             </li>
-            <li data-genre="All"><a href="" class="active_movie">All</a></li>
-            <li data-genre="Action"><a href="">Action</a></li>
-            <li data-genre="Kids"><a href="">Kids</a></li>
-            <li data-genre="Comedy"><a href="">Comedy</a></li>
-            <li data-genre="Drama"><a href="">Drama</a></li>
-            <li data-genre="Horror"><a href="">Horror</a></li>
+            <li><button class="cat-button" id="all-btn">All movies</button></li>
+            <li><button class="cat-button" id="action-btn">Action</button></li>
+            <li><button class="cat-button" id="kids-btn">Kids</button></li>
+            <li><button class="cat-button" id="horror-btn">Horror</button></li>
+            <li><button class="cat-button" id="drama-btn">Drama</button></li>
+            <li><button class="cat-button" id="comedy-btn">Comedy</button></li>
           </ul>
         </nav>
         <div>

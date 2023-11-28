@@ -5,12 +5,12 @@ export async function signInOutButton() {
   const SectionTwo = document.getElementById("section_signup");
   //SectionTwo.style.display = "none";
 
-  await signinButtonOne.addEventListener("click", function () {
+  signinButtonOne.addEventListener("click", function () {
     SectionOne.style.display = "block";
     SectionTwo.style.display = "none";
   });
 
-  await signupButtonTwo.addEventListener("click", function () {
+  signupButtonTwo.addEventListener("click", function () {
     SectionOne.style.display = "none";
     SectionTwo.style.display = "block";
   });

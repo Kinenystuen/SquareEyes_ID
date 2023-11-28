@@ -1,8 +1,7 @@
 import { getExistingShopInv } from "../utils/shopFunctions.js";
 
-const paynowButton = document.querySelector(".payNowButton");
-
-export function displayYourMovies() {
+export async function displayYourMovies() {
+  const paynowButton = document.querySelector(".payNowButton");
   const purchase_movies_container = document.getElementById(
     "purchase_movies_container"
   );
@@ -26,20 +25,33 @@ export function displayYourMovies() {
     });
 }
 displayYourMovies();
+// Function to handle the "paynow" button click
 
-function handlePayClick() {
-  // let shoppingBag = JSON.parse(localStorage.getItem("shoppingBag")) || [];
-  // let paidMovies = JSON.parse(localStorage.getItem("paidMovies")) || [];
-  // // Move items from shoppingBag to paidMovies
-  // paidMovies = paidMovies.push(shoppingBag);
-  // // Clear shoppingBag
-  // //shoppingBag = [];
-  // // Update local storage with the modified arrays
-  // localStorage.setItem("shoppingBag", JSON.stringify(shoppingBag));
-  // localStorage.setItem("paidMovies", JSON.stringify(paidMovies));
-  // // After processing, display the updated movies
-}
-document.addEventListener("DOMContentLoaded", function() {
-  // Your code here, including the event listener for paynowButton
-  paynowButton.addEventListener("click", handlePayClick);
-});
+// document.getElementById("paynow").addEventListener("click", function () {
+//   const shoppingBag = getExistingShopInv();
+//   const paidMovies = getExistingPaidMovies() || [];
+//   paidMovies.push(...shoppingBag);
+//   localStorage.setItem("paidMovies", JSON.stringify(paidMovies));
+//   displayPaidMovies();
+// });
+
+
+
+// // Function to retrieve existing paid movies from local storage
+// function getExistingPaidMovies() {
+//   return JSON.parse(localStorage.getItem("paidMovies")) || [];
+// }
+
+
+// // Function to fetch and display paid movies at the specified container
+// export function displayPaidMovies() {
+//   const paidMoviesContainer = document.getElementById("purchase_movies_container");
+//   const paidMovies = getExistingPaidMovies();
+//   paidMoviesContainer.innerHTML = '';
+//   paidMovies.forEach(movie => {
+//     const movieDiv = document.createElement('div');
+//     movieDiv.textContent = movie.title; // Adjust this based on your movie object structure
+//     paidMoviesContainer.appendChild(movieDiv);
+//   });
+// }
+

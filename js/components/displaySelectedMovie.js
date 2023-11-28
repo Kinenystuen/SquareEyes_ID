@@ -13,17 +13,13 @@ export function displaySelectedMovie(movieInfo) {
   if (movieInfo.id) {
     // Code for shopping bag
     let cssShopClass = "gray";
-    const doesObjectExist = shoppingBag.find(function (bag) {
-      return parseInt(bag.id) === parseInt(movieInfo.id);
-    });
+    const doesObjectExist = shoppingBag.find(bag => String(bag.id) === String(movieInfo.id));
     if (doesObjectExist) {
       cssShopClass = "yellow";
     }
     // Code for favorites bag
     let cssFavClass = "icon_heart";
-    const doesFavObjectExist = favoritesBag.find(function (bag) {
-      return parseInt(bag.id) === parseInt(movieInfo.id);
-    });
+    const doesFavObjectExist = favoritesBag.find(bag => String(bag.id) === String(movieInfo.id));
     if (doesFavObjectExist) {
       cssFavClass = "icon_heart_checked";
     }

@@ -1,4 +1,4 @@
-export function showSearchBar() {
+export async function showSearchBar() {
   // code from html & CSS course
   const menu_search_icon_button = document.getElementById("menu_search_icon");
   const search_bar_area = document.getElementById("search_bar_area");
