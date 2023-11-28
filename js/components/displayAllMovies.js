@@ -15,9 +15,7 @@ Display all movies
 
 
 export async function displayMovies() {
-  // Add event listeners to the buttons
   categoryButtons();
-  // Initially, display all movies
   const allMovies = await filterMovies('all');
   updateMovieDisplay(allMovies);
 }

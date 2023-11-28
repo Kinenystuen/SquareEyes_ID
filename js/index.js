@@ -19,7 +19,6 @@ import { displayFavoritesBag } from "./components/displayFavorites.js";
 
 //display your profile
 import { displayYourMovies } from "./components/displayPaidMovies.js";
-//import { displayPaidMovies } from "./components/displayPaidMovies.js";
 
 // // scripts from html and css course
 // // // Sign in out page
