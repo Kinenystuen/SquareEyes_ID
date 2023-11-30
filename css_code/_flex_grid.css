@@ -9,3 +9,12 @@
 .w100 {
     width: 100%;
 }
+
+
+/* Grids */
+
+.gridfit200 {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:  1rem;
+}

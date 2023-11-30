@@ -14,6 +14,7 @@ Content
 @import url("/your_page.html");
 @import url("/your_profile.html");
 @import url("/css_code/_flex_grid.css");
+@import url("/css_code/_shop_box.css");
 
 * {
   font-size: 16px;
@@ -25,6 +26,11 @@ html {
     font-size: 16px;
     position: relative;
   }
+
+  .images {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
   
   header, body , footer{
     font-family: "montserrat", Verdana, Geneva, Tahoma, sans-serif;
@@ -88,11 +94,6 @@ html {
   }
   h2 {
     font-size: 1.1rem;
-  }
-  /*  */
-  h2.movieinfoh2 {
-    display: flex;
-    align-items: center;
   }
 
   /*to add info to some icons */
@@ -187,9 +188,9 @@ html {
     border-bottom: 5px solid var(--purple);
   }
   
-  .nav_left li:nth-child(3), .nav_left li:nth-child(4) {
+  /* .nav_left li:nth-child(3), .nav_left li:nth-child(4) {
     display: none;
-  }
+  } */
   
   #menu_checkbox, .hamburger_icon {
     display: none;
@@ -215,6 +216,9 @@ html {
     width: fit-content;
     justify-content: center;
   }
+  .nav_right a:nth-child(3) {
+    display: none;
+}
 
   /* icons right nav*/
    .icon_favorites_nav {
@@ -602,9 +606,6 @@ html {
   border-radius: 8px;
 }
 
-.go_back_button_text {
-  visibility: hidden;
-}
 .go_back_button:hover .go_back_button_text {
   visibility: visible;
 }
@@ -749,9 +750,9 @@ button {
       .nav_left li:nth-child(4) {
           display: flex;
       }
-      .nav_right a:nth-child(3) {
+      /* .nav_right a:nth-child(3) {
           display: none;
-      }
+      } */
 
       .logo_header {
           display: block;

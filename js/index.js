@@ -14,11 +14,14 @@ import {
   handleShopTrash,
 } from "./components/displayShoppingBag.js";
 
+import { displayAddToCart } from "./components/displayShopBox.js";
+
 // display favoritesBag
 import { displayFavoritesBag } from "./components/displayFavorites.js";
 
 //display your profile
 import { displayYourMovies } from "./components/displayPaidMovies.js";
+import { displayCheckout } from "./components/displayCheckout.js";
 
 // // scripts from html and css course
 // // // Sign in out page

@@ -1,5 +1,9 @@
 import { getExistingShopInv } from "../utils/shopFunctions.js";
 
+document.addEventListener("DOMContentLoaded", function() {
+  updShoppingBagCount(); // Call your function here
+});
+
 export function updShoppingBagCount() {
   const shopBagCountContainer = document.getElementById(
     "shopBagCountContainer"
@@ -16,4 +20,3 @@ export function updShoppingBagCount() {
   shopBagCountContainer.innerHTML = `<span class="badge">${shoppingBagCount}</span>`;
 }
 
-updShoppingBagCount();

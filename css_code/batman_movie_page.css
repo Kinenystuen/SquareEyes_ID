@@ -15,8 +15,7 @@ h2 {
 
 #movieImage {
     position: relative;
-    min-height: 300px;
-    height: 60vh;
+    min-height: 400px;
     margin: auto;
     
 }
@@ -25,9 +24,7 @@ h2 {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    display: flex;
-    margin: 0 auto;
+    object-fit: cover;  
 }
 
 .headerpic_gradient {
@@ -42,6 +39,7 @@ h2 {
 }
 
 .movie_info {
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: left;
@@ -301,12 +299,11 @@ h2 {
 
     .movie_info_top {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        margin-top: 10px;
+        text-align: start;
     }
 
-    .movie_info h1 {
+    .movie_info_top h1 {
         font-size: 1.2rem;
     }
 

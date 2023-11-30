@@ -3,6 +3,7 @@
 import { displayMovies } from "./displayAllMovies.js";
 import { getExistingShopInv } from "../utils/shopFunctions.js";
 import { updShoppingBagCount } from "./displayShopCount.js";
+import { displayAddToCart } from "./displayShopBox.js";
 
 const shoppingBag = getExistingShopInv();
 
@@ -40,6 +41,8 @@ export function handleClick(event) {
     };
     currentShopBag.push(movieProduct);
     saveShopBag(currentShopBag);
+    
+    displayAddToCart();
   } else {
     const newShopMovie = currentShopBag.filter((bag) => bag.id !== id);
     saveShopBag(newShopMovie);

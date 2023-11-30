@@ -3,9 +3,9 @@
 import { displayMovies } from "./displayAllMovies.js";
 import { getExistingFavInv } from "../utils/favFunctions.js";
 
-const favoritesBag = getExistingFavInv();
 
 export function handleClickFav(event) {
+  const favoritesBag = getExistingFavInv();
   event.target.classList.toggle("icon_heart");
   event.target.classList.toggle("icon_heart_checked");
 

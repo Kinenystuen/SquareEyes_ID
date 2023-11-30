@@ -64,13 +64,16 @@ export async function displayShoppingBag() {
 
     //2.payment section
     inShopBagContainer.innerHTML += `<div class="flexy"><p>${shopMovies.title}</p>
-    <p>${shopMovies.price}</p></div>`;
+    <p>${shopMovies.price} kr</p></div>`;
 
     totalPrice += parseFloat(shopMovies.price);
   });
 
-  totalPriceContainer.innerHTML = `${totalPrice} kr`;
-  totalPriceContainer2.innerHTML = `<div class="flexy w100 marginbottom3rem "><p>Total price:</p><p>${totalPrice} kr</p></div>`;
+  let totalPriceFormatted = parseFloat(totalPrice.toFixed(2));
+    console.log(totalPriceFormatted);
+
+  totalPriceContainer.innerHTML = `${totalPriceFormatted} kr`;
+  totalPriceContainer2.innerHTML = `<div class="flexy w100 marginbottom3rem "><p>Total price:</p><p>${totalPriceFormatted} kr</p></div>`;
 
   const trashCanButton = document.querySelectorAll(".trashcan");
 

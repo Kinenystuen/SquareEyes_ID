@@ -1,34 +1,27 @@
 import { getExistingShopInv } from "../utils/shopFunctions.js";
 
-export async function displayYourMovies() {
+export async function displayCheckout() {
   const shoppingBag = await getExistingShopInv();
 
   //const paynowButton = document.querySelector(".payNowButton");
-  const purchase_movies_container = document.getElementById(
-    "purchase_movies_container"
+  const loadCheckout = document.getElementById(
+    "checkoutSucsess"
   );
 
   //let paidMovies = JSON.parse(localStorage.getItem("paidMovies")) || [];
   shoppingBag.forEach((movies) => {
-      purchase_movies_container.innerHTML += `
-                          <div class="information_box2">
-                            <a href="/products/movie_details.html?id=${movies.id}" class="movie_cover"
-                              ><img src="${movies.image}" alt="${movies.title} cover"
-                              /></a>
-                              <div class="information_movie_text">
-                              <h4>${movies.title}</h4>
-                              </div>
-                              <a href="#" class="profile_watch_now"
-                              >Watch now
-                              <figure class="rightarrow2"></figure
-                              ></a>
+    loadCheckout.innerHTML += `
+                              <div class="gridfit200">
+                                <h2>${movies.title}</h2>
+                                <img src="${movies.image}" alt="${movies.title}" />
+                                <button>Start Watching</button>
                               </div>
     `;
     });
 
 }
 
-displayYourMovies();
+displayCheckout();
 
 
 // Function to handle the "paynow" button click

@@ -31,29 +31,27 @@ html {
   .arrowdown:hover {
     transform: scale(1.1) translateY(20px);
   }
-  
-  .movie img, .movie button {
-    padding: 0 5%;
+
+  .gridfit200 img {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 400px;
   }
-  .movie h2 {
+  .gridfit200 h2 {
     margin-top: 100px;
     font-size: 1.2rem;
     text-transform: uppercase;
   }
-  .movie img {
-    object-fit: cover;
-    height: auto;
-  }
-  .movie button {
+  .gridfit200 button {
     background-color: var(--yellow);
     padding: 8px 5%;
     font-size: 1.2rem;
     border-radius:0px 0px 5px 5px;
   }
-  .movie button:hover {
+  .gridfit200 button:hover {
     font-weight: 600;
   }
 
+
+.successfull_purchase a {
+color: var(--yellow);
+text-decoration: none;
+}
