@@ -75,6 +75,10 @@ button.playbutton,
   #shopBagCountContainer {
     position: absolute;
     background-color: var(--dark_purple);
-    border-radius: 50%;
-    bottom: 30%;
+    border-radius: 0%;
+    bottom: 32%;
   }
+  #shopBagCountContainer .badge {
+    font-size: 12px;
+  }
+

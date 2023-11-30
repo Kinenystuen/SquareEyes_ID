@@ -13,7 +13,7 @@ export function updShoppingBagCount() {
     shopBagCountContainer.style.display = "flex";
   }
 
-  shopBagCountContainer.innerHTML = `<span class="badge">${shoppingBagCount}.</span>`;
+  shopBagCountContainer.innerHTML = `<span class="badge">${shoppingBagCount}</span>`;
 }
 
 updShoppingBagCount();

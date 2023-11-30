@@ -13,6 +13,7 @@ Content
 @import url("/your_list.html");
 @import url("/your_page.html");
 @import url("/your_profile.html");
+@import url("/css_code/_flex_grid.css");
 
 * {
   font-size: 16px;
@@ -69,7 +70,10 @@ html {
     width: 100%;
     margin: 0px auto;
   }
-  
+  .marginbottom3rem {
+    margin-bottom: 3rem;
+  }
+
   .marginbottom30vh {
    margin-bottom: 30vh;
   }
@@ -84,6 +88,11 @@ html {
   }
   h2 {
     font-size: 1.1rem;
+  }
+  /*  */
+  h2.movieinfoh2 {
+    display: flex;
+    align-items: center;
   }
 
   /*to add info to some icons */
@@ -147,7 +156,7 @@ html {
     align-self: center;
   }
 
-  .nav_left a, .nav_right a {
+  .nav_left a, .nav_right a, .information_text a {
     text-decoration: none;
     padding: 8px;
     color: var(--greywhite);
@@ -612,12 +621,12 @@ html {
 .icon_heart {
   content: url(/icons/icon_heart.svg);
   height: 1.8rem;
-  margin: auto;
+  margin: 1rem 0.2rem;
 }
 .icon_heart_checked {
   content: url(/icons/icon_heart_checked.png);
   height: 1.8rem;
-  margin: auto;
+  margin: 1rem 0.2rem;
 }
 
 .icon_pluss {
@@ -690,9 +699,8 @@ button {
           content: url(icons/icon_hamburger_v.svg);
           background-repeat: no-repeat;
           position: absolute;
-          top: 22px;
+          top: 20px;
           width: 2rem;
-          height: 2rem;
           left: 10%;
 
       }
@@ -741,8 +749,7 @@ button {
       .nav_left li:nth-child(4) {
           display: flex;
       }
-      .nav_right a:nth-child(3),
-      .nav_right a:nth-child(4) {
+      .nav_right a:nth-child(3) {
           display: none;
       }
 

@@ -42,10 +42,7 @@ export function displaySelectedMovie(movieInfo) {
               <div class="button_icon_area">
                   <div class="watchButtonArea">
                   <button id="playbutton" class="playbutton" tabindex="0" onclick="watchtrailer()">Watch trailer</button></div>
-                  <div class="icons iconsSelPage">
-                    <div class="favoritesBagButton"><i class="icon_heart  ${cssFavClass}" aria-label="Save to your favorites" add" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}"  data-favorite="${movieInfo.favorite}"></i>
-                  </div>
-                  <i class="icon_pluss" aria-label="Save to your list"></i>
+                  <div class="favoritesBagButton"><i class="icon_heart  ${cssFavClass}" aria-label="Save to your favorites" add" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}"  data-favorite="${movieInfo.favorite}"></i>               
             </div>          
           </div>
         <div class="shopBagButton"><div class="shoppingBagButtonSelMovie ${cssShopClass}" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}" data-favorite="${movieInfo.favorite}" aria-label="Add to shopping bag"><span class="shopping_bag_icon sizeFit"></span></div></div>

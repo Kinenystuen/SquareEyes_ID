@@ -1,0 +1,9 @@
+
+h2.movieinfoh2 {
+    display: flex;
+    align-items: center;
+}
+
+.text2rem {
+    size: 2rem;
+}

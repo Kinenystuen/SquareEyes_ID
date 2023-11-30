@@ -54,7 +54,7 @@ h2 {
 .movie_info h1 {
     font-size: 2rem;
     text-transform: uppercase;
-    margin: 0px;
+    margin: auto;
 }
 
 .imdb_rating_mobile {

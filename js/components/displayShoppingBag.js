@@ -70,7 +70,7 @@ export async function displayShoppingBag() {
   });
 
   totalPriceContainer.innerHTML = `${totalPrice} kr`;
-  totalPriceContainer2.innerHTML = `<div class="flexy"><p>Total price:</p><p>${totalPrice} kr</p></div>`;
+  totalPriceContainer2.innerHTML = `<div class="flexy w100 marginbottom3rem "><p>Total price:</p><p>${totalPrice} kr</p></div>`;
 
   const trashCanButton = document.querySelectorAll(".trashcan");
 

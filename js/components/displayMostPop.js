@@ -4,7 +4,7 @@
 
 import { fetchApiSquareEyes } from "../api/squareeyesData.js";
 
-export function displayPopularMovie(allMovies) {
+export async function displayPopularMovie(allMovies) {
   const mostPopularNow = document.getElementById("mostPopularNow");
 
   mostPopularNow.innerHTML = "";

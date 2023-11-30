@@ -1,3 +1,7 @@
+
+import { fetchApiSquareEyes } from "../api/squareeyesData.js";
+
+
 import { randomArray } from "../utils/randomFunc.js";
 export async function displaySugMovies(randomData) {
   // forloop for suggested movies

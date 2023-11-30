@@ -27,22 +27,23 @@ export async function displayFavoritesBag() {
                                             alt="${favMovies.title} movie cover"
                                         /></a>
                                         <div class="information_text">
-                                          <h3>${favMovies.title}</h3>
+                                          <a href="/products/movie_details.html?id=${favMovies.id}"><h3>${favMovies.title}</h3></a>
                                         </div>
                                         <div class="information_box_end">
+                                            <div class="figure_flex">
+                                                <figure
+                                                class="icon_x"
+                                                aria-label="Remove from favorites"
+                                                title="Remove from favorites"
+                                                ></figure>
+                                            </div>
                                           <a href="/products/movie_details.html?id=${favMovies.id}">
                                             <div class="figure_rightarrow">
                                               <p>More info</p>
                                               <figure class="rightarrow2"></figure>
                                             </div>
                                           </a>
-                                          <div class="figure_x">
-                                            <figure
-                                              class="icon_x"
-                                              aria-label="Remove from favorites"
-                                              title="Remove from favorites"
-                                            ></figure>
-                                          </div>
+                                          
                                         </div>
                                       </div>`;
 

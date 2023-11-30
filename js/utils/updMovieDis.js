@@ -47,16 +47,18 @@ export async function updateMovieDisplay(filteredMovies) {
                                               </a>
                                           </div>
                                           <div class="movie_info">
-                                              <h2><a href="/products/movie_details.html?id=${filteredMovies[i].id}">${filteredMovies[i].title}</a></h2>
+                                            <div class="flex space_between">
+                                                <h2 class="movieinfoh2"><a href="/products/movie_details.html?id=${filteredMovies[i].id}">${filteredMovies[i].title}</a></h2>
+                                                <div class="favoritesBagButton">
+                                                <i class="icon_heart pointer ${cssFavClass}" aria-label="Save to your favorites" title="Add to favorites" data-id="${filteredMovies[i].id}" data-title="${filteredMovies[i].title}" data-image="${filteredMovies[i].image}" data-description="${filteredMovies[i].description}" data-price="${filteredMovies[i].price}" data-discountedPrice="${filteredMovies[i].discountedPrice}" data-rating="${filteredMovies[i].rating}" data-genre="${filteredMovies[i].genre}" data-index="${filteredMovies[i].index}"  data-favorite="${filteredMovies[i].favorite}"></i>
+                                                </div>
+                                              </div>
+                                              
                                               <p class="movie_descrition">
                                               ${filteredMovies[i].description}
                                               </p>
                                               <p class="movie_price">${filteredMovies[i].price} kr</p>
                                               <div class="icons">
-                                              <div class="favoritesBagButton">
-                                                <i class="icon_heart pointer ${cssFavClass}" aria-label="Save to your favorites" title="Add to favorites" data-id="${filteredMovies[i].id}" data-title="${filteredMovies[i].title}" data-image="${filteredMovies[i].image}" data-description="${filteredMovies[i].description}" data-price="${filteredMovies[i].price}" data-discountedPrice="${filteredMovies[i].discountedPrice}" data-rating="${filteredMovies[i].rating}" data-genre="${filteredMovies[i].genre}" data-index="${filteredMovies[i].index}"  data-favorite="${filteredMovies[i].favorite}"></i>
-                                                </div>
-                                                <i class="icon_pluss pointer" aria-label="Save to your list"></i>
                                               </div>
                                               <div class="buttons pointer">
                                               <a

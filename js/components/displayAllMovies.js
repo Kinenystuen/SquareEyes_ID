@@ -11,7 +11,6 @@ import { categoryButtons } from "../utils/eventListeners.js/categoryButtons.js";
 Display all movies
 ////////////////////////////////*/
 
-// fetching existing shoppingbag inventory
 
 
 export async function displayMovies() {

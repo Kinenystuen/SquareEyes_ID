@@ -60,9 +60,9 @@ h1 {
   transition: all 0.3 ease;
 }
 
-.headerscreen:hover {
+/* .headerscreen:hover {
   background: radial-gradient(91.59% 91.59% at 50% 50.14%, rgba(27, 14, 44, 0) 0%, #1B0E2C 100%);
-}
+} */
 
 .squareeyes_glasses {
   position: absolute;
@@ -302,7 +302,7 @@ h1 {
   align-items: center;
   justify-content: center;
   max-width: 1500px;
-  margin: 170px auto;
+  margin: 5vh;
 }
 
 .section5_image {
@@ -458,7 +458,7 @@ h1 {
   }
 
   .section1, .section2, .section3, .section4, .section5 {
-    margin: 100px 0px;
+    margin: 10vh 0px;
   }
 
   html {
@@ -472,9 +472,6 @@ h1 {
   object-fit: cover;
   max-height: 240px;
   width: 100%;
-}
-.mostPopular {
-  display: none;
 }
 
 .section5_info {
@@ -676,10 +673,6 @@ h1 {
   justify-content: center;
   border-right: none;
   padding-right: 0px;
-}
-
-.once_upon_home {
-  display: none;
 }
 
 .once_upon {
