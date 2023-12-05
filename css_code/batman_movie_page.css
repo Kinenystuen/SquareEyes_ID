@@ -16,6 +16,7 @@ h2 {
 #movieImage {
     position: relative;
     min-height: 400px;
+    height: 50vh;
     margin: auto;
     
 }
@@ -277,11 +278,7 @@ h2 {
 @media (max-height: 900px) {
     .batmansection1 {
         min-height: 400px;
-    }
-
-    .movie_info {
-        max-width: 350px;
-    }
+    }    
 }
 
 @media (max-width: 730px) {
@@ -300,11 +297,11 @@ h2 {
     .movie_info_top {
         display: flex;
         justify-content: space-between;
-        text-align: start;
     }
 
     .movie_info_top h1 {
         font-size: 1.2rem;
+        display: contents;
     }
 
     .imdb_rating {
@@ -314,7 +311,7 @@ h2 {
     .imdb_rating_mobile {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        text-align: end;
         font-size: 1rem;
     }
 

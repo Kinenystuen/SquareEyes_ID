@@ -188,8 +188,11 @@ h2 a{
   }
   /* buttons and shopping bag */
   .buttons { 
+    box-sizing: border-box;
     display: flex;
     gap: 4px;
+    width: 100%;
+    height: max-content;
   }
   .buttons a {
     display: flex;
@@ -242,7 +245,7 @@ h2 a{
         font-size: 0.8rem;
       }
     }
-  @media (max-width:1000px) {
+  @media (max-width:1200px) {
     /* movie card */
     .movie_cover {
       flex: 1;
@@ -330,6 +333,6 @@ h2 a{
 
       /* movie cards */
       .movie_cover, .movie_info {
-        flex: 1;
+        flex: 1fr;
       }
   }

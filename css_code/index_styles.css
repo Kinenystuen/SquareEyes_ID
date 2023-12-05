@@ -154,7 +154,7 @@ h1 {
   align-items: center;
   justify-content: center;
   max-width: 1500px;
-  margin: 40px auto 0px ;
+  margin: 0 auto;
 }
 
 .section1_info {
@@ -317,7 +317,7 @@ h1 {
   align-items: center;
   justify-content: center;
   max-width: 1500px;
-  margin: 5vh;
+  margin-top: 5rem;
 }
 
 .section5_image {
@@ -361,7 +361,6 @@ h1 {
   border: 1px solid var(--greywhite);
   border-radius: 5px;
   padding: 8px;
-  margin-top: 50px;
   width: fit-content;
 }
 
@@ -370,7 +369,7 @@ h1 {
   font-weight:600;
 }
 
-@media (min-height:740px) {
+@media (min-height:920px) {
   .arrowdown {
     display: none;
   }

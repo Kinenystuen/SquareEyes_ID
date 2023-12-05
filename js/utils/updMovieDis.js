@@ -58,8 +58,7 @@ export async function updateMovieDisplay(filteredMovies) {
                                               ${filteredMovies[i].description}
                                               </p>
                                               <p class="movie_price">${filteredMovies[i].price} kr</p>
-                                              <div class="icons">
-                                              </div>
+                                              
                                               <div class="buttons pointer">
                                               <a
                                                   href="/products/movie_details.html?id=${filteredMovies[i].id}"
