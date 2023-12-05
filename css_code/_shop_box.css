@@ -5,8 +5,8 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    height: 40vh;
-    width: 200px;
+    height: 300px;
+    width: 220px;
     border: 2px solid var(--purple);
     background-color: var(--greywhite);
     color: var(--dark_purple);

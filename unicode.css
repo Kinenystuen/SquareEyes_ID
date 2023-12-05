@@ -58,6 +58,10 @@ html {
     outline: none;
   }
 
+  .center {
+    display: flex;
+    justify-content: center;
+  }
   .content_wrap /* tells the page to center everything */ {
     width: 80%;
     margin: 0px auto;
@@ -121,7 +125,7 @@ html {
   }
   
   /* /////// Header code //////////*/
-  
+
   header  {
     position: fixed; /*makes the header stay at the top all time*/
     display: flex;

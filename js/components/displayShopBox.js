@@ -26,7 +26,7 @@ export async function displayAddToCart() {
         });
         setTimeout(() => {
             cartBoxShow.style.display = 'none';
-          }, 9000);
+          }, 5000);
         
 
           document.getElementById('closeShopBox').addEventListener('click', async () => {

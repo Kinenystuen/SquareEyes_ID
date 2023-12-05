@@ -1,107 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="describtion"
-      content="Webpage for movie lovers. Choose between numbers of fantastic movies."
-    />
-    <link rel="stylesheet" href="unicode.css" />
-    <link rel="stylesheet" href="css_code/index_styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" src="js/index.js" defer></script>
-    <title>SquareEyes | Home</title>
 
-    <!-- Hotjar Tracking Code for https://squareeyes-id.netlify.app/ -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 3738402, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="describtion" content="Webpage for movie lovers. Choose between numbers of fantastic movies." />
+  <link rel="stylesheet" href="unicode.css" />
+  <link rel="stylesheet" href="css_code/index_styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
+    rel="stylesheet" />
+  <script type="module" src="js/index.js" defer></script>
+  <title>SquareEyes | Home</title>
 
-  <body>
-    <header>
-      <a href="index.html"
-        ><img
-          class="logo_header"
-          src="Images/SquareEyes_Logo_org.png"
-          alt="Logo SquareEyes"
-      /></a>
-      <div class="header_left">
-        <input type="checkbox" name="menu_checkbox" id="menu_checkbox" />
-        <label
-          for="menu_checkbox"
-          tabindex="0"
-          class="hamburger_icon"
-          aria-label="Navigation menu"
-        ></label>
-        <nav class="nav_left">
-          <ul>
-            <li><a href="index.html" class="active_page">Home</a></li>
-            <li><a href="movie-pages/all-movies.html">Movies</a></li>
-            <li><a href="your_fav.html">Favorites</a></li>
-            <li><a href="about_us.html">About us</a></li>
-            <li><a href="contact_us.html">Contact us</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header_right">
-        <nav class="nav_right">
-          <input
-            id="menu_search_icon"
-            type="search"
-            placeholder="Search"
-            class="search"
-            aria-labelledby="search_bar"
-          />
-          <label for="menu_search_icon" class="icon_search"
-            ><span id="search_bar" class="gone_text">Search bar</span></label
-          >
-          <a href="your_fav.html" aria-label="Go to your favorites page">
-            <figure class="icon_favorites_nav"></figure>
-          </a>
-          <a
-            href="checkout.html"
-            aria-label="Go to shopping bag"
-            class="iconShopContainer"
-          >
-            <figure class="icon_shopping_bag_nav"></figure>
-            <span id="shopBagCountContainer"></span>
-          </a>
-          <a href="your_page.html" aria-label="Go to your profile">
-            <figure class="icon_profile_nav"></figure>
-          </a>
-        </nav>
-      </div>
-      <div class="search_bar_area" id="search_bar_area">
-        <input
-          type="search"
-          id="dropdown_menu"
-          name="dropdown_menu"
-          placeholder="Search"
-          class="search_dropdown"
-        />
-        <label for="dropdown_menu" aria-label="Dropdown search menu"></label>
-      </div>
-    </header>
-    <main class="content_wrap">
-      <section class="headerdesign">
+  <!-- Hotjar Tracking Code for https://squareeyes-id.netlify.app/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj =
+        h.hj ||
+        function () {
+          (h.hj.q = h.hj.q || []).push(arguments);
+        };
+      h._hjSettings = { hjid: 3738402, hjsv: 6 };
+      a = o.getElementsByTagName("head")[0];
+      r = o.createElement("script");
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+  </script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img class="logo_header" src="Images/SquareEyes_Logo_org.png" alt="Logo SquareEyes" /></a>
+    <div class="header_left">
+      <input type="checkbox" name="menu_checkbox" id="menu_checkbox" />
+      <label for="menu_checkbox" tabindex="0" class="hamburger_icon" aria-label="Navigation menu"></label>
+      <nav class="nav_left">
+        <ul>
+          <li><a href="index.html" class="active_page">Home</a></li>
+          <li><a href="movie-pages/all-movies.html">Movies</a></li>
+          <li><a href="your_fav.html">Favorites</a></li>
+          <li><a href="about_us.html">About us</a></li>
+          <li><a href="contact_us.html">Contact us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header_right">
+      <nav class="nav_right">
+        <input id="menu_search_icon" type="search" placeholder="Search" class="search" aria-labelledby="search_bar" />
+        <label for="menu_search_icon" class="icon_search"><span id="search_bar" class="gone_text">Search
+            bar</span></label>
+        <a href="your_fav.html" aria-label="Go to your favorites page">
+          <figure class="icon_favorites_nav"></figure>
+        </a>
+        <a href="checkout.html" aria-label="Go to shopping bag" class="iconShopContainer">
+          <figure class="icon_shopping_bag_nav"></figure>
+          <span id="shopBagCountContainer"></span>
+        </a>
+        <a href="your_page.html" aria-label="Go to your profile">
+          <figure class="icon_profile_nav"></figure>
+        </a>
+      </nav>
+    </div>
+    <div class="search_bar_area" id="search_bar_area">
+      <input type="search" id="dropdown_menu" name="dropdown_menu" placeholder="Search" class="search_dropdown" />
+      <label for="dropdown_menu" aria-label="Dropdown search menu"></label>
+    </div>
+  </header>
+  <main class="content_wrap">
+    <div class="headerdesign homepage_area">
+      <figure class="homepage_design"></figure>
+      <a href="#section5" class="arrowplacing">
+        <figure class="arrowdown">
+          <img src="icons/icon_arrow.png" alt="Arrow and button for guiding you down the page." />
+        </figure>
+      </a>
+    </div>
+    <!-- <section class="headerdesign">
         <div class="headergradient"></div>
         <div>
           <div class="headerscreenmes">
@@ -131,133 +108,104 @@
             </figure>
           </a>
         </div>
-      </section>
-      <section class="section5" id="section5">
-        <div id="mostPopularNow" class="section5">
-          <div class="loader_area"><div class="loader"></div></div>
+      </section> -->
+    <section class="section5" id="section5">
+      <div id="mostPopularNow" class="section5">
+        <div class="loader_area">
+          <div class="loader"></div>
         </div>
-      </section>
-      <div class="section1" id="section1">
-        <div class="section1_info">
+      </div>
+    </section>
+    <div class="section1" id="section1">
+      <div class="section1_info">
+        <p>
+          Embrace the world of independent cinema and discover great
+          collections from talented filmmakers.
+        </p>
+        <a href="movie-pages/all-movies.html">See our collection</a>
+      </div>
+      <div class="section1_image">
+        <img src="images/clipped_crew_pic_home_page_min.png" alt="A picture of two movie crew members" />
+      </div>
+    </div>
+    <div class="section2">
+      <div class="section2_area">
+        <div class="section2_row">
+          <img src="icons/icon_yellow_dot.png" alt="A yellow dot" class="yellow_dot" />
           <p>
-            Embrace the world of independent cinema and discover great
-            collections from talented filmmakers.
+            Find your new favorite movies with our handpicked collections and
+            easy-to-browse categories.
           </p>
-          <a href="movie-pages/all-movies.html">See our collection</a>
         </div>
-        <div class="section1_image">
-          <img
-            src="images/clipped_crew_pic_home_page_min.png"
-            alt="A picture of two movie crew members"
-          />
-        </div>
-      </div>
-      <div class="section2">
-        <div class="section2_area">
-          <div class="section2_row">
-            <img
-              src="icons/icon_yellow_dot.png"
-              alt="A yellow dot"
-              class="yellow_dot"
-            />
-            <p>
-              Find your new favorite movies with our handpicked collections and
-              easy-to-browse categories.
-            </p>
-          </div>
-          <div class="section2_row">
-            <img
-              src="icons/icon_yellow_dot.png"
-              alt="A yellow dot"
-              class="yellow_dot"
-            />
-            <p>
-              Discover high-quality videos and support independent filmmakers.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="section3">
-        <div class="section3_image">
-          <img
-            class="batman_sunset"
-            src="images/batman_sunset_cropped-min.jpg"
-            alt="A picture of Batman"
-          />
-          <img
-            class="batman_cover"
-            src="images/Movie_batman.jpeg"
-            alt="Batman cover picture"
-          />
-        </div>
-        <div class="section3_info">
+        <div class="section2_row">
+          <img src="icons/icon_yellow_dot.png" alt="A yellow dot" class="yellow_dot" />
           <p>
-            Experience the excitement of superheroes, the wonder of animation,
-            and the thrill of horror with our collection of movies.
+            Discover high-quality videos and support independent filmmakers.
           </p>
         </div>
       </div>
-      <section class="suggestion_section">
-        <h2>Suggestions:</h2>
-        <div class="moviephotos" id="suggestionContainer">
-          <div class="loader_area"><div class="loader"></div></div>
-        </div>
-      </section>
-      <div class="supportfilm">
-        <div class="supportfilm_area">
-          <p>Supporting small filmmakers and discovering interesting films.</p>
-          <a href="movie-pages/all-movies.html">View movies</a>
+    </div>
+    <div class="section3">
+      <div class="section3_image">
+        <img class="batman_sunset" src="images/batman_sunset_cropped-min.jpg" alt="A picture of Batman" />
+        <img class="batman_cover" src="images/Movie_batman.jpeg" alt="Batman cover picture" />
+      </div>
+      <div class="section3_info">
+        <p>
+          Experience the excitement of superheroes, the wonder of animation,
+          and the thrill of horror with our collection of movies.
+        </p>
+      </div>
+    </div>
+    <section class="suggestion_section">
+      <h2>Suggestions:</h2>
+      <div class="moviephotos" id="suggestionContainer">
+        <div class="loader_area">
+          <div class="loader"></div>
         </div>
       </div>
-    </main>
-    <footer class="footer_class">
-      <section class="newsletter">
-        <div class="newsletter_area">
-          <h2>Want to sign up to our newsletter?</h2>
-          <p>
-            Join the SquareEyes family and be among the first to receive news
-            about new movies!
-          </p>
-          <fieldset class="newsletterfieldset">
-            <legend id="n_s" class="gone_text">Newsletter subscribtion</legend>
-            <label for="newsletter_email" aria-labelledby="n_s"></label>
-            <input
-              id="newsletter_email"
-              placeholder="Your email"
-              name="email"
-              type="text"
-              class="newsletteremail"
-              required
-            />
-            <input
-              type="submit"
-              value="Subscribe"
-              class="newslettersubscribe"
-            />
-          </fieldset>
-        </div>
-      </section>
-      <div class="footerbar">
-        <div class="footernav">
-          <span> &copy; SquareEyes </span>
-          <a href="about_us.html">About us</a>
-          <a href="contact_us.html">Contact us</a>
-          <a href="#">Terms and conditions</a>
-        </div>
-        <div class="footerlogo">
-          <a href="index.html"
-            ><img
-              class="logo_footer"
-              src="images/SquareEyes_Logo_org.png"
-              alt="Squareeyes logo"
-          /></a>
-        </div>
-        <div class="footersocialmedia">
-          <a href="#" class="instagram" aria-label="Instagram"></a>
-          <a href="#" class="twitter" aria-label="Twitter"></a>
-          <a href="#" class="facebook" aria-label="Facebook"></a>
-        </div>
+    </section>
+    <div class="supportfilm">
+      <div class="supportfilm_area">
+        <p>Supporting small filmmakers and discovering interesting films.</p>
+        <a href="movie-pages/all-movies.html">View movies</a>
       </div>
-    </footer>
-  </body>
+    </div>
+  </main>
+  <footer class="footer_class">
+    <section class="newsletter">
+      <div class="newsletter_area">
+        <h2>Want to sign up to our newsletter?</h2>
+        <p>
+          Join the SquareEyes family and be among the first to receive news
+          about new movies!
+        </p>
+        <fieldset class="newsletterfieldset">
+          <legend id="n_s" class="gone_text">Newsletter subscribtion</legend>
+          <label for="newsletter_email" aria-labelledby="n_s"></label>
+          <input id="newsletter_email" placeholder="Your email" name="email" type="text" class="newsletteremail"
+            required />
+          <input type="submit" value="Subscribe" class="newslettersubscribe" />
+        </fieldset>
+      </div>
+    </section>
+    <div class="footerbar">
+      <div class="footernav">
+        <span> &copy; SquareEyes </span>
+        <a href="about_us.html">About us</a>
+        <a href="contact_us.html">Contact us</a>
+        <a href="#">Terms and conditions</a>
+      </div>
+      <div class="footerlogo">
+        <a href="index.html"><img class="logo_footer" src="images/SquareEyes_Logo_org.png" alt="Squareeyes logo" /></a>
+      </div>
+      <div class="footersocialmedia">
+        <a href="#" class="instagram" aria-label="Instagram"></a>
+        <a href="#" class="twitter" aria-label="Twitter"></a>
+        <a href="#" class="facebook" aria-label="Facebook"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
