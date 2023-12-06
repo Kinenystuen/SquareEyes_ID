@@ -16,6 +16,10 @@ h1 {
   margin: 16px auto;
   max-width: 1500px;
 }
+.h1text {
+  text-align: center;
+  font-family: 'Abril Fatface';
+}
 /* Header design */
   
 
@@ -318,11 +322,14 @@ h1 {
   justify-content: center;
   max-width: 1500px;
   margin-top: 5rem;
+  width: 100%;
 }
 
 .section5_image {
   border-right: 3px solid var(--purple);
   padding-right: 20px;
+  width: 100%;
+  flex: 1;
 }
 .section5_image img {
   height: 300px;
