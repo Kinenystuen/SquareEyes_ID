@@ -66,7 +66,7 @@ export async function updateMovieDisplay(filteredMovies) {
                                                   >More info</a>
                                                <div class="shoppingBagButton"> 
                                                   <i class="shopping_bag_button ${cssShopClass} add" title="Add to shoppingcart" data-id="${filteredMovies[i].id}" data-title="${filteredMovies[i].title}" data-image="${filteredMovies[i].image}" data-description="${filteredMovies[i].description}" data-price="${filteredMovies[i].price}" data-discountedPrice="${filteredMovies[i].discountedPrice}" data-rating="${filteredMovies[i].rating}" data-genre="${filteredMovies[i].genre}" data-index="${filteredMovies[i].index}" data-favorite="${filteredMovies[i].favorite}">
-                                                   <span class="shopping_bag"></span></i>
+                                                   </i>
                                               </div>
                                               </div>
                                           </div>
@@ -77,10 +77,13 @@ export async function updateMovieDisplay(filteredMovies) {
   const shopBagButtons = document.querySelectorAll(".shopping_bag_button");
   const iconHeartButtons = document.querySelectorAll(".icon_heart");
 
-  // Event listener for shopping bag
+  // Event listener for shopping bag    <span class="shopping_bag"></span>
   shopBagButtons.forEach((button) => {
+    
     button.addEventListener("click", handleClick);
+    
   });
+  
   // Event listener for shopping bag
   iconHeartButtons.forEach((button) => {
     button.addEventListener("click", handleClickFav);

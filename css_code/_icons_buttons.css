@@ -6,11 +6,7 @@
     height: 1.2rem;
     padding-left: 1rem;
 }
-.shopping_bag { /*adds shopping bag icon to the button */
-    content: url(/icons/icon_shopping_bag_final.png);
-      width: 1rem;
-      height: auto;
-  }
+
 .gray {
     background-color: var(--greywhite);
 }
@@ -38,6 +34,13 @@
     margin: 0px 2px;
     color: var(--dark_purple);
   }
+  .shopping_bag_button::after { /*adds shopping bag icon to the button */
+    content: url(/icons/icon_shopping_bag_final.png);
+      height: auto;
+  }
+
+  
+
   .shoppingBagButtonSelMovie {
     display: flex;
     align-items: center;
