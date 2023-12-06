@@ -11,6 +11,16 @@ export function handleClickSelMovie(event, movieInfo) {
   event.target.classList.toggle("gray");
   event.target.classList.toggle("yellow");
 
+  const optionsContainer = document.getElementById("optionsButton");
+
+  if (event.target.classList.contains("yellow")) {
+    optionsContainer.style.display = "flex"; // Clear previous content
+  }
+  else {
+    optionsContainer.style.display = "none"; // Clear previous content
+  }
+  
+
   const currentShopBag = getExistingShopInv();
   const id = movieInfo.id;
     const title = movieInfo.title;

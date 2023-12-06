@@ -45,7 +45,8 @@ export function displaySelectedMovie(movieInfo) {
                   <div class="favoritesBagButton pointer"><i class="icon_heart  ${cssFavClass}" aria-label="Save to your favorites" add" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}"  data-favorite="${movieInfo.favorite}"></i>               
             </div>          
           </div>
-        <div class="shopBagButton pointer"><div class="shoppingBagButtonSelMovie ${cssShopClass}" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}" data-favorite="${movieInfo.favorite}" aria-label="Add to shopping bag"><span class="shopping_bag_icon sizeFit"></span></div></div>
+        <div class="shopBagButton pointer"><div class="shoppingBagButtonSelMovie ${cssShopClass}" data-id="${movieInfo.id}" data-title="${movieInfo.title}" data-image="${movieInfo.image}" data-description="${movieInfo.description}" data-price="${movieInfo.price}" data-discountedPrice="${movieInfo.discountedPrice}" data-rating="${movieInfo.rating}" data-genre="${movieInfo.genre}" data-index="${movieInfo.index}" data-favorite="${movieInfo.favorite}" aria-label="Add to shopping bag"></div></div>
+        <div class="buttonsOptions" id="optionsButton"><a href="/movie-pages/all-movies.html""  class="buttonOption">Continue shopping</a><a href="/checkout.html" class="buttonOption">Go to shopping bag</a></div>
       </div>
   </div>
 </section>
@@ -82,6 +83,13 @@ export function displaySelectedMovie(movieInfo) {
 
 
 const shopBagButtons = document.querySelectorAll(".shopBagButton");
+const optionsContainer = document.getElementById("optionsButton");
+if (doesObjectExist) {
+  optionsContainer.style.display = "flex";
+}
+else {
+  optionsContainer.style.display = "none";
+}
 
 
 // Event listener for shopping bag
