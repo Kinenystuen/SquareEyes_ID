@@ -15,6 +15,7 @@ Content
 @import url("/your_profile.html");
 @import url("/css_code/_flex_grid.css");
 @import url("/css_code/_shop_box.css");
+@import url("/css_code/_text.css");
 
 * {
   font-size: 16px;

@@ -14,10 +14,10 @@ export function handleClickSelMovie(event, movieInfo) {
   const optionsContainer = document.getElementById("optionsButton");
 
   if (event.target.classList.contains("yellow")) {
-    optionsContainer.style.display = "flex"; // Clear previous content
+    optionsContainer.style.display = "flex"; 
   }
   else {
-    optionsContainer.style.display = "none"; // Clear previous content
+    optionsContainer.style.display = "none";
   }
   
 

@@ -7,3 +7,18 @@ h2.movieinfoh2 {
 .text2rem {
     size: 2rem;
 }
+
+.old_price {
+    text-decoration:line-through;
+    color: var(--white);
+}
+.on_sale {
+    color: var(--white);
+    cursor:context-menu;
+    border-left: 2px solid var(--yellow);
+    padding-left: 0.5rem;
+}
+
+/* .on_sale::before {
+    content: "Sale: ";
+} */

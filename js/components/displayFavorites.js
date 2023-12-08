@@ -1,24 +1,25 @@
 
-//
+import { clearHTML } from "../render/clearHTML.js";
 
 // favFunctions.js
 import { getExistingFavInv } from "../utils/favFunctions.js";
+import { saveFavBag } from "./favorites.js";
 
 export async function displayFavoritesBag() {
   const favoritesBag = getExistingFavInv();
 
   const favoritesBagContainer = document.getElementById("favoritesBagContainer");
 
-  if (favoritesBag.length === 0) {
-    favoritesBagContainer.innerHTML = "No movies added";
-  }
-  favoritesBagContainer.innerHTML = ``;
+  // if (favoritesBag.length === 0) {
+  //   favoritesBagContainer.innerText = "No movies added";
+  // }
+  clearHTML(favoritesBagContainer);
   if (favoritesBag.length === 0) {
     favoritesBagContainer.innerHTML = `<div class="information_box flexdown">
     <div class="information_text">There is no favorites yet  </div>
     <div class="information_text link"><a href="/movie-pages/all-movies.html">Click here to see all movies</a></div>`;
   } else {
-  }
+  
   favoritesBag.forEach((favMovies) => {
     favoritesBagContainer.innerHTML += `<div class="information_box">
                                         <a href="/products/movie_details.html?id=${favMovies.id}" class="movie_cover"
@@ -48,6 +49,7 @@ export async function displayFavoritesBag() {
                                       </div>`;
 
   });
+}
 
   const figurexButton = document.querySelectorAll(".icon_x");
 
@@ -68,8 +70,9 @@ export function handleFavTrash(event) {
       // Remove the item from the favorites bag array
       favoritesBag.splice(indexFavBag, 1);
 
-      // Update the local storage with the modified favorites bag
-      localStorage.setItem("favoritesBag", JSON.stringify(favoritesBag));
+      // // Update the local storage with the modified favorites bag
+      //localStorage.setItem("favoritesBag", JSON.stringify(favoritesBag));
+      saveFavBag(favoritesBag);
 
       // Update the displayed favorites bag
       displayFavoritesBag();

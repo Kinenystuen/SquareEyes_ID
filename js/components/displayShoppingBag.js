@@ -1,5 +1,5 @@
 //
-
+import { clearHTML } from "../render/clearHTML.js";
 // shopFunctions.js
 import { getExistingShopInv } from "../utils/shopFunctions.js";
 import { updShoppingBagCount } from "./displayShopCount.js";
@@ -13,18 +13,18 @@ export async function displayShoppingBag() {
   const inShopBagContainer = document.getElementById("inShopBagContainer");
   const totalPriceContainer2 = document.getElementById("totalPriceContainer2");
 
-  shopBagItems.innerHTML = `Number of items: ${shoppingBag.length}`;
+  shopBagItems.innerText = `Number of items: ${shoppingBag.length}`;
   if (shoppingBag.length === 0) {
-    shoppingBagContainer.innerHTML = "No movies added";
+    shoppingBagContainer.innerText = "No movies added";
   }
-  shoppingBagContainer.innerHTML = ``;
-  totalPriceContainer.innerHTML = ``;
-  inShopBagContainer.innerHTML = ``;
+  clearHTML(shoppingBagContainer);
+  clearHTML(totalPriceContainer);
+  clearHTML(inShopBagContainer);
   if (shoppingBag.length === 0) {
     shoppingBagContainer.innerHTML = `<div class="chosen_movie flexdown">
     <div class="infoShop">Your shoppingbag is empty :O  </div>
     <div class="link"><a href="/movie-pages/all-movies.html">Click here to see all movies</a></div>`;
-    totalPriceContainer.innerHTML = "0kr";
+    totalPriceContainer.innerText = "0 kr";
   } else {
   }
   let totalPrice = 0;
@@ -70,9 +70,8 @@ export async function displayShoppingBag() {
   });
 
   let totalPriceFormatted = parseFloat(totalPrice.toFixed(2));
-    console.log(totalPriceFormatted);
 
-  totalPriceContainer.innerHTML = `${totalPriceFormatted} kr`;
+  totalPriceContainer.innerText = `${totalPriceFormatted} kr`;
   totalPriceContainer2.innerHTML = `<div class="flexy w100 marginbottom3rem "><p>Total price:</p><p>${totalPriceFormatted} kr</p></div>`;
 
   const trashCanButton = document.querySelectorAll(".trashcan");

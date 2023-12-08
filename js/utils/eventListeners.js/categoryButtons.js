@@ -54,10 +54,10 @@ export function categoryButtons() {
   function updCategory(selectedGenre) {
     const selectedCategory = document.getElementById("selectedCategory");
     if (!selectedGenre) {
-      selectedCategory.innerHTML = `Categories:`;
+      selectedCategory.innerText = `Categories:`;
     }
     else {
-    selectedCategory.innerHTML = `Category: ${selectedGenre}`;
+    selectedCategory.innerText = `Category: ${selectedGenre}`;
   }
   }
 

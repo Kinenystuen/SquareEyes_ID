@@ -23,6 +23,15 @@ export function displaySelectedMovie(movieInfo) {
     if (doesFavObjectExist) {
       cssFavClass = "icon_heart_checked";
     }
+    let cssOnSale = "";
+    let oldPrice = [];
+    let cssOldPrice = "";
+    if (movieInfo.discountedPrice < movieInfo.price) {
+      oldPrice = movieInfo.price;
+      movieInfo.price = movieInfo.discountedPrice;
+      cssOnSale = "on_sale";
+      cssOldPrice ="old_price";
+    }
 
 
     movieDetailContainer.innerHTML = `<section class="" id="movieImage">
@@ -38,7 +47,7 @@ export function displaySelectedMovie(movieInfo) {
                   </div>
               </div>
               <p class="movie_descrition">${movieInfo.description}</p>
-              <p class="movie_price">${movieInfo.price} kr</p>
+              <p class="movie_price ${cssOnSale}">${movieInfo.price} kr  <span class="${cssOldPrice}">${oldPrice}</span></p>
               <div class="button_icon_area  ">
                   <div class="watchButtonArea ">
                   <button id="playbutton" class="playbutton pointer" tabindex="0" onclick="watchtrailer()">Watch trailer</button></div>

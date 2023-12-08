@@ -18,6 +18,7 @@ import { displayAddToCart } from "./components/displayShopBox.js";
 
 // display favoritesBag
 import { displayFavoritesBag } from "./components/displayFavorites.js";
+import { checkIfFav } from "./components/favorites.js";
 
 //display your profile
 import { displayYourMovies } from "./components/displayPaidMovies.js";

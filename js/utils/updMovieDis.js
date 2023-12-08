@@ -5,18 +5,20 @@ import { handleClickFav } from "../components/favorites.js";
 
 import { getExistingFavInv } from "./favFunctions.js";
 import { getExistingShopInv } from "./shopFunctions.js";
+import { clearHTML } from "../render/clearHTML.js";
 
 
 
 
 export async function updateMovieDisplay(filteredMovies) {
-
     // fetching existing shoppingbag inventory
     const shoppingBag = getExistingShopInv();
     const favoritesBag = getExistingFavInv();
 
     const movieContainer = document.getElementById("allMoviesContainer");
-    movieContainer.innerHTML = "";
+    //movieContainer.innerHTML = "";
+    clearHTML(movieContainer);
+
     
     // display what genre that is selected
   for (let i = 0; i < filteredMovies.length; i++) {
@@ -34,6 +36,15 @@ export async function updateMovieDisplay(filteredMovies) {
     const doesFavObjectExist = favoritesBag.find(bag => String(bag.id) === String(filteredMovies[i].id));
     if (doesFavObjectExist) {
       cssFavClass = "icon_heart_checked";
+    }
+    let cssOnSale = "";
+    let oldPrice = [];
+    let cssOldPrice = "";
+    if (filteredMovies[i].discountedPrice < filteredMovies[i].price) {
+      oldPrice = filteredMovies[i].price;
+      filteredMovies[i].price = filteredMovies[i].discountedPrice;
+      cssOnSale = "on_sale";
+      cssOldPrice ="old_price";
     }
 
     movieContainer.innerHTML += `
@@ -57,7 +68,7 @@ export async function updateMovieDisplay(filteredMovies) {
                                               <p class="movie_descrition">
                                               ${filteredMovies[i].description}
                                               </p>
-                                              <p class="movie_price">${filteredMovies[i].price} kr</p>
+                                              <p class="movie_price ${cssOnSale}">${filteredMovies[i].price} kr  <span class="${cssOldPrice}">${oldPrice}</span></p>
                                               
                                               <div class="buttons pointer">
                                               <a
@@ -79,9 +90,7 @@ export async function updateMovieDisplay(filteredMovies) {
 
   // Event listener for shopping bag    <span class="shopping_bag"></span>
   shopBagButtons.forEach((button) => {
-    
     button.addEventListener("click", handleClick);
-    
   });
   
   // Event listener for shopping bag

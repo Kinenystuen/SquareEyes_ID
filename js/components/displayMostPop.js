@@ -3,11 +3,12 @@
     ////////////////////////////*/
 
 import { fetchApiSquareEyes } from "../api/squareeyesData.js";
+import { clearHTML } from "../render/clearHTML.js";
 
 export async function displayPopularMovie(allMovies) {
   const mostPopularNow = document.getElementById("mostPopularNow");
 
-  mostPopularNow.innerHTML = "";
+  clearHTML(mostPopularNow);
   // Find the movie with the highest rating - it works
   //   const higestRatedMovie = allMovies.reduce((prev, current) => {
   //     return prev.rating > current.rating ? prev : current;

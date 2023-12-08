@@ -1,5 +1,6 @@
 
 import { fetchApiSquareEyes } from "../api/squareeyesData.js";
+import { clearHTML } from "../render/clearHTML.js";
 
 
 import { randomArray } from "../utils/randomFunc.js";
@@ -9,7 +10,7 @@ export async function displaySugMovies(randomData) {
     randomArray(randomData);
     const randomObjects = randomData.slice(0, 4);
     const suggestionContainer = document.getElementById("suggestionContainer");
-    suggestionContainer.innerHTML = "";
+    clearHTML(suggestionContainer);
     for (let rM = 0; rM < randomObjects.length; rM++) {
       // Display random movie cards
       const aElement = document.createElement("a");

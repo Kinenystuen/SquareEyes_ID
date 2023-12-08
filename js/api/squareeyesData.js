@@ -1,10 +1,11 @@
 import { displayMovies } from "../components/displayAllMovies.js";
 import { displaySugMovies } from "../components/displaySuggest.js";
 import { displayPopularMovie } from "../components/displayMostPop.js";
+import { checkIfFav } from "../components/favorites.js";
 
-const urlSquareEyes = `https://api.noroff.dev/api/v1/square-eyes`;
 
 export async function fetchApiSquareEyes() {
+  const urlSquareEyes = `https://api.noroff.dev/api/v1/square-eyes`;
   try {
     const responseSE = await fetch(urlSquareEyes);
     // If the url is wrong, then this (throw new Error) will make an error
