@@ -50,27 +50,16 @@ export function categoryButtons() {
       updCategory(selectedGenre);
     });
     document.getElementById('sortButton').addEventListener('click', async () => {
-      // Get the selected genre (you can replace 'all' with the desired genre)
       const selectedGenre = `all`;
     
-      // Call the filterAndSortMovies function
       const sortedMovies = await filterMovies(selectedGenre);
-    
-      // Call the displayMovies function to update the displayed movies
       updateMovieDisplay(sortedMovies, selectedGenre);
     });
-    // Add an event listener to the sort button
     document.getElementById('priceLowHigh').addEventListener('click', async () => {
-      // Get the selected category (you can replace 'all' with the desired category)
       const selectedCategory = `all`;
+      const selectedSortBy = 'price';
 
-      // Get the selected sorting criterion
-      const selectedSortBy = 'price'; // You can change this to other criteria like 'title'
-
-      // Call the filterAndSortMovies function with category and sorting criterion
       const sortedMovies = await filterMovies(selectedCategory, selectedSortBy);
-
-      // Call the displayMovies function to update the displayed movies
       updateMovieDisplay(sortedMovies, selectedCategory);
     });
 

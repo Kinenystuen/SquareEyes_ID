@@ -3,12 +3,10 @@ import { getExistingShopInv } from "../utils/shopFunctions.js";
 export async function displayYourMovies() {
   const shoppingBag = await getExistingShopInv();
 
-  //const paynowButton = document.querySelector(".payNowButton");
   const purchase_movies_container = document.getElementById(
     "purchase_movies_container"
   );
 
-  //let paidMovies = JSON.parse(localStorage.getItem("paidMovies")) || [];
   shoppingBag.forEach((movies) => {
       purchase_movies_container.innerHTML += `
                           <div class="information_box2">
