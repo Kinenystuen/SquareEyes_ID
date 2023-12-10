@@ -78,6 +78,16 @@ h2 a{
     background-color: var(--purple);
     border-radius: 6px;
   }
+  .sort-button {
+    background-color: var(--greywhite);
+    color: var(--dark_purple);
+    width: 100%;
+    text-align: start;
+    padding: 0.5rem 0.5rem;
+  }
+  .sort-button:hover {
+    background-color: var(--white);
+  }
  
 
 
