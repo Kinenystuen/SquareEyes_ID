@@ -1,5 +1,5 @@
 
-# Square Eyes - Cross-course project
+# SquareEyes - Cross-course project
 <a href="https://squareeyes-id.netlify.app/"> <img src="https://kineon-portfolio.netlify.app/img/Square_eyes_pro.png" /></a>
 
 ## About the project
