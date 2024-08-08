@@ -26,5 +26,7 @@ export async function filterMovies(category, sortBy) {
       break;
   }
 
+
+
   return filteredMovies;
 }
