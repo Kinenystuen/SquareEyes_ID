@@ -17,6 +17,7 @@ h2.movieinfoh2 {
     cursor:context-menu;
     border-left: 2px solid var(--yellow);
     padding-left: 0.5rem;
+    
 }
 
 /* .on_sale::before {
