@@ -11,7 +11,7 @@ export async function displayYourMovies() {
       purchase_movies_container.innerHTML += `
                           <div class="information_box2">
                             <a href="/products/movie_details.html?id=${movies.id}" class="movie_cover"
-                              ><img src="${movies.image}" alt="${movies.title} cover"
+                              ><img src="${movies.image.url}" alt="${movies.image.alt} cover"
                               /></a>
                               <div class="information_movie_text">
                               <h4>${movies.title}</h4>
@@ -26,36 +26,9 @@ export async function displayYourMovies() {
 
 }
 
-displayYourMovies();
+const purchaseMoviesContainer = document.getElementById("purchase_movies_container");
 
-
-// Function to handle the "paynow" button click
-
-// document.getElementById("paynow").addEventListener("click", function () {
-//   const shoppingBag = getExistingShopInv();
-//   const paidMovies = getExistingPaidMovies() || [];
-//   paidMovies.push(...shoppingBag);
-//   localStorage.setItem("paidMovies", JSON.stringify(paidMovies));
-//   displayPaidMovies();
-// });
-
-
-
-// // Function to retrieve existing paid movies from local storage
-// function getExistingPaidMovies() {
-//   return JSON.parse(localStorage.getItem("paidMovies")) || [];
-// }
-
-
-// // Function to fetch and display paid movies at the specified container
-// export function displayPaidMovies() {
-//   const paidMoviesContainer = document.getElementById("purchase_movies_container");
-//   const paidMovies = getExistingPaidMovies();
-//   paidMoviesContainer.innerHTML = '';
-//   paidMovies.forEach(movie => {
-//     const movieDiv = document.createElement('div');
-//     movieDiv.textContent = movie.title; // Adjust this based on your movie object structure
-//     paidMoviesContainer.appendChild(movieDiv);
-//   });
-// }
+if (purchaseMoviesContainer) {
+  displayYourMovies();
+}
 
