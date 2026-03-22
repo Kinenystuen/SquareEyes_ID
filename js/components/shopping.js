@@ -1,56 +1,86 @@
-//
-
-import { displayMovies } from "./displayAllMovies.js";
 import { getExistingShopInv } from "../utils/shopFunctions.js";
 import { updShoppingBagCount } from "./displayShopCount.js";
 import { displayAddToCart } from "./displayShopBox.js";
 
-const shoppingBag = getExistingShopInv();
+function saveShopBag(shopBag) {
+  if (!Array.isArray(shopBag)) {
+    console.error("saveShopBag expected an array, got:", shopBag);
+    return;
+  }
+
+  localStorage.setItem("shoppingBag", JSON.stringify(shopBag));
+}
 
 export function handleClick(event) {
-  event.target.classList.toggle("gray");
-  event.target.classList.toggle("yellow");
+  const button = event.currentTarget;
+
+  if (!button) {
+    console.error("No shopping button found.");
+    return;
+  }
 
   const currentShopBag = getExistingShopInv();
-  const id = this.dataset.id;
-  const title = this.dataset.title;
-  const image = this.dataset.image;
-  const genre = this.dataset.genre;
-  const price = this.dataset.price;
-  const discountedPrice = this.dataset.discountedPrice;
-  const released = this.dataset.released;
-  const rating = this.dataset.rating;
-  const index = this.dataset.index;
-  const favorite = this.dataset.favorite;
 
-  const movieProductExists = currentShopBag.find(function (bag) {
-    return bag.id === id;
-  });
-  if (movieProductExists === undefined) {
+  if (!Array.isArray(currentShopBag)) {
+    console.error("Shopping bag is not an array:", currentShopBag);
+    return;
+  }
+
+  const id = button.dataset.id;
+  const title = button.dataset.title || "";
+  const imageUrl = button.dataset.image || "";
+  const imageAlt = button.dataset.imageAlt || title || "Movie poster";
+  const genre = button.dataset.genre || "";
+  const price = button.dataset.price || "";
+  const discountedPrice = button.dataset.discountedprice || "";
+  const released = button.dataset.released || "";
+  const rating = button.dataset.rating || "";
+  const index = button.dataset.index || "";
+  const favorite = button.dataset.favorite || false;
+
+  if (!id) {
+    console.error("Shopping button is missing data-id.");
+    return;
+  }
+
+  const movieProductExists = currentShopBag.find(
+    (bag) => String(bag.id) === String(id),
+  );
+
+  if (!movieProductExists) {
     const movieProduct = {
-      id: id,
-      title: title,
-      image: image,
-      genre: genre,
-      price: price,
-      discountedPrice: discountedPrice,
-      released: released,
-      rating: rating,
-      index: index,
-      favorite: favorite,
+      id,
+      title,
+      image: {
+        url: imageUrl,
+        alt: imageAlt,
+      },
+      genre,
+      price,
+      discountedPrice,
+      released,
+      rating,
+      index,
+      favorite,
     };
+
     currentShopBag.push(movieProduct);
     saveShopBag(currentShopBag);
-    
+
+    button.classList.remove("gray");
+    button.classList.add("yellow");
+
     displayAddToCart();
   } else {
-    const newShopMovie = currentShopBag.filter((bag) => bag.id !== id);
+    const newShopMovie = currentShopBag.filter(
+      (bag) => String(bag.id) !== String(id),
+    );
+
     saveShopBag(newShopMovie);
+
+    button.classList.remove("yellow");
+    button.classList.add("gray");
   }
 
   updShoppingBagCount();
-}
-
-function saveShopBag(shopBag) {
-  localStorage.setItem("shoppingBag", JSON.stringify(shopBag));
 }
