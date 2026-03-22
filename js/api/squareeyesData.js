@@ -1,29 +1,39 @@
 import { displayMovies } from "../components/displayAllMovies.js";
 import { displaySugMovies } from "../components/displaySuggest.js";
 import { displayPopularMovie } from "../components/displayMostPop.js";
-import { checkIfFav } from "../components/favorites.js";
+
 
 
 export async function fetchApiSquareEyes() {
-  const urlSquareEyes = `https://api.noroff.dev/api/v1/square-eyes`;
+  const urlSquareEyes = "https://v2.api.noroff.dev/square-eyes";
+
   try {
     const responseSE = await fetch(urlSquareEyes);
-    // If the url is wrong, then this (throw new Error) will make an error
-    if (!responseSE.ok) {
-      throw new Error(`API request failed with status: ` + responseSE.status);
-    }
-    const allMovies = await responseSE.json();
-    const randomData = [...allMovies];
 
-    displaySugMovies(randomData);
-    displayPopularMovie(allMovies);
-    //console.log(allMovies);
-    return allMovies;
+    if (!responseSE.ok) {
+      throw new Error(`API request failed with status: ${responseSE.status}`);
+    }
+
+    const result = await responseSE.json();
+    const movies = result.data || [];
+
+    return movies;
   } catch (error) {
-    console.log(error);
+    console.error("Failed to fetch Square Eyes data:", error);
+    return [];
   }
 }
 
 (async () => {
   await fetchApiSquareEyes();
 })();
+
+const movies = await fetchApiSquareEyes();
+
+if (document.getElementById("suggestionContainer")) {
+  displaySugMovies([...movies]);
+}
+
+if (document.getElementById("mostPopularNow")) {
+  displayPopularMovie(movies);
+} 
