@@ -1,31 +1,53 @@
 import { displaySelectedMovie } from "../components/displaySelectedMovie.js";
-import { checkIfOpenMoviepage } from "../utils/checkpage.js";
-import { handleClickSelMovie } from "../components/shoppingSelMovie.js";
 
-// Finds the id in the queryString
+function showError(message) {
+  const movieDetailContainer = document.getElementById("movieDetailContainer");
+
+  if (!movieDetailContainer) {
+    console.error(message);
+    return;
+  }
+
+  movieDetailContainer.innerHTML = `
+    <div class="message error">
+      <p>${message}</p>
+    </div>
+  `;
+}
+
+// Finds the id in the query string
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const idSelectedMovie = params.get("id");
 
-const urlId = `https://api.noroff.dev/api/v1/square-eyes/` + idSelectedMovie;
-
-let movieInfo;
 export async function fetchApiSelectedMovie() {
+  if (!idSelectedMovie) {
+    console.error("No movie id found in URL.");
+    showError("Could not find movie id in the URL.");
+    return null;
+  }
+
+  const urlId = `https://v2.api.noroff.dev/square-eyes/${idSelectedMovie}`;
+
   try {
-    let movieInfo;
     const responseSM = await fetch(urlId);
-    // If the url is wrong, then this (throw new Error) will make an error
+
     if (!responseSM.ok) {
-      throw new Error(`API request failed with status: ` + responseSM.status);
+      throw new Error(`API request failed with status: ${responseSM.status}`);
     }
+
     const jsonSM = await responseSM.json();
-    movieInfo = jsonSM;
+    const movieInfo = jsonSM.data;
+
+    if (!movieInfo) {
+      throw new Error("Movie data was missing from API response.");
+    }
+
     displaySelectedMovie(movieInfo);
-    handleClickSelMovie(event, movieInfo);
-    handleClickFavMovie(event, movieInfo);
-
-
+    return movieInfo;
   } catch (error) {
-    console.log("Error selectedMovie: " + error);
+    console.error("Error selectedMovie:", error);
+    showError("Could not load movie details.");
+    return null;
   }
 }

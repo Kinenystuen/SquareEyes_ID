@@ -16,22 +16,6 @@
     />
     <script type="module"  src="js/index.js" defer></script>
     <title>SquareEyes | Sign in / Sign up</title>
-    <!-- Hotjar Tracking Code for https://squareeyes-id.netlify.app/ -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 3738402, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
   </head>
 
   <body>
@@ -43,7 +27,7 @@
           alt="Logo SquareEyes"
       /></a>
       <div class="header_left">
-        <input type="checkbox" name="menu_checkbox" id="menu_checkbox" />
+        <input type="checkbox" name="menu_checkbox" id="menu_checkbox" autocomplete="Sign in" />
         <label
           for="menu_checkbox"
           class="hamburger_icon"
@@ -67,6 +51,7 @@
             placeholder="Search"
             class="search"
             aria-labelledby="search_bar"
+            autocomplete="Search"
           />
           <label for="menu_search_icon" class="icon_search"
             ><span id="search_bar" class="gone_text">Search bar</span></label
@@ -94,11 +79,12 @@
           name="dropdown_menu"
           placeholder="Search"
           class="search_dropdown"
+          autocomplete="Search"
         />
         <label for="dropdown_menu" aria-label="Dropdown search menu"></label>
       </div>
     </header>
-    <main class="main_h content_wrap">
+    <main class="main_h content_wrap" id="section_signin_out">
       <section class="signin_section" id="section_signin">
         <h1>Sign in</h1>
         <form class="signin_area" method="post" enctype="text/plain">
@@ -111,6 +97,7 @@
                 id="email_sign_in"
                 placeholder="Your email"
                 aria-label="Your email"
+                autocomplete="Email"
               />
             </div>
             <div>
@@ -121,6 +108,7 @@
                 id="password1"
                 placeholder="Your password"
                 aria-label="Your password"
+                autocomplete="Your password"
               />
               <a href="#" class="f_p">Forgotten your password?</a>
               <div class="checkboxes">
@@ -129,6 +117,7 @@
                   name="remember_me"
                   id="remember_me"
                   aria-label="Checkbox: Remember me"
+                  autocomplete="Remember me"
                 />
                 <label for="remember_me">Remember me</label>
               </div>
@@ -142,6 +131,7 @@
               id="sign_up"
               name="sign_up"
               value="Sign up now"
+              autocomplete="Sign up now"
             />
           </div>
         </form>
@@ -158,6 +148,7 @@
                 id="first_name"
                 placeholder="First name"
                 aria-label="First name"
+                autocomplete="First name"
               />
             </div>
             <div>
@@ -168,6 +159,7 @@
                 id="last_name"
                 placeholder="Last name"
                 aria-label="Last name"
+                autocomplete="Last name"
               />
             </div>
             <div>
@@ -178,6 +170,7 @@
                 id="email_sign_up"
                 placeholder="Your email"
                 aria-label="Your email"
+                autocomplete="Your email"
               />
             </div>
             <div>
@@ -188,6 +181,7 @@
                 id="password2"
                 placeholder="Your password"
                 aria-label="Your password"
+                autocomplete="Your password"
               />
             </div>
             <div>
@@ -198,13 +192,14 @@
                 id="password3"
                 placeholder="Repeat password"
                 aria-label="Repeat password"
+                autocomplete="Repeat password"
               />
             </div>
           </div>
           <a href="/your_profile.html" class="yellowbutton">Sign up</a>
           <div class="grey">
             <p>Already have an account?</p>
-            <input type="button" id="sign_in" name="sign_in" value="Sign in" />
+            <input type="button" id="sign_in" name="sign_in" value="Sign in" autocomplete="Sign in" />
           </div>
         </form>
       </section>

@@ -10,9 +10,6 @@ export async function displayFavoritesBag() {
 
   const favoritesBagContainer = document.getElementById("favoritesBagContainer");
 
-  // if (favoritesBag.length === 0) {
-  //   favoritesBagContainer.innerText = "No movies added";
-  // }
   clearHTML(favoritesBagContainer);
   if (favoritesBag.length === 0) {
     favoritesBagContainer.innerHTML = `<div class="information_box flexdown">
@@ -24,7 +21,7 @@ export async function displayFavoritesBag() {
     favoritesBagContainer.innerHTML += `<div class="information_box">
                                         <a href="/products/movie_details.html?id=${favMovies.id}" class="movie_cover"
                                           ><img
-                                            src="${favMovies.image}"
+                                            src="${favMovies.image.url}"
                                             alt="${favMovies.title} movie cover"
                                         /></a>
                                         <div class="information_text">
@@ -57,7 +54,12 @@ export async function displayFavoritesBag() {
     button.addEventListener("click", handleFavTrash);
   });
 }
-displayFavoritesBag();
+const container = document.getElementById("favoritesBagContainer");
+
+if (container) {
+  displayFavoritesBag();
+}
+
 
 export function handleFavTrash(event) {
   if (event) {
