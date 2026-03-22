@@ -11,7 +11,11 @@ export async function sendMessageFun() {
   });
 }
 
-sendMessageFun();
+const sendmessageButton = document.getElementById("sendmessage");
+
+if (sendmessageButton) {
+  sendMessageFun();
+}
 
 export async function sendMessage() {
   const sendmessageButton = document.getElementById("sendmessage");
@@ -21,4 +25,8 @@ export async function sendMessage() {
   });
 }
 
-sendMessage();
+const sendmessageButton2 = document.getElementById("sendmessage");
+
+if (sendmessageButton2) {
+   sendMessage();
+} 
