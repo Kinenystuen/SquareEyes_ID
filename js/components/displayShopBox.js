@@ -17,7 +17,7 @@ export async function displayAddToCart() {
               <h3>Added to cart:</h3>
               <h4>${movies.title}</h4>
               <div class="cartBoxImg">
-                <img class="" src="${movies.image.url}" alt="${movies.title}">
+                <img class="" src="${typeof movies.image === 'string' ? movies.image : movies.image.url}" alt="${movies.image?.alt || movies.title}">
               </div>
               <a href="/checkout.html" class="boxButton">Go to shopping bag</a>
               <button id="closeShopBox" class="boxButton">Continue shopping</button>
