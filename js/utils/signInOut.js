@@ -15,8 +15,9 @@ export async function signInOutButton() {
     SectionTwo.style.display = "block";
   });
 }
-
-signInOutButton();
+if (document.getElementById("section_signin_out")) {
+  signInOutButton();
+}
 
 // function goto_your_profile() {
 //   window.location.href = "/your_profile.html";
