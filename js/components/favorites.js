@@ -1,74 +1,94 @@
-//
-
-import { displayMovies } from "./displayAllMovies.js";
 import { getExistingFavInv } from "../utils/favFunctions.js";
-import { fetchApiSquareEyes } from "../api/squareeyesData.js";
-
-
-export function handleClickFav(event) {
-
-  const favoritesBag = getExistingFavInv();
-  event.target.classList.toggle("icon_heart");
-  event.target.classList.toggle("icon_heart_checked");
-
-  const currentFavBag = getExistingFavInv();
-  const id = this.dataset.id;
-  const title = this.dataset.title;
-  const image = this.dataset.image;
-  const genre = this.dataset.genre;
-  const price = this.dataset.price;
-  const discountedPrice = this.dataset.discountedPrice;
-  const released = this.dataset.released;
-  const rating = this.dataset.rating;
-  const index = this.dataset.index;
-  const favorite = this.dataset.favorite;
-
-  const movieProductExists = currentFavBag.find(function (bag) {
-    return bag.id === id;
-  });
-  if (movieProductExists === undefined) {
-    const movieProduct = {
-      id: id,
-      title: title,
-      image: image,
-      genre: genre,
-      price: price,
-      discountedPrice: discountedPrice,
-      released: released,
-      rating: rating,
-      index: index,
-      favorite: true,
-    };
-    currentFavBag.push(movieProduct);
-    saveFavBag(currentFavBag);
-  } else {
-    const newFavMovie = currentFavBag.filter((bag) => bag.id !== id);
-    saveFavBag(newFavMovie);
-  }
-
-}
 
 export function saveFavBag(favBag) {
+  if (!Array.isArray(favBag)) {
+    console.error("saveFavBag expected an array, got:", favBag);
+    return;
+  }
+
   localStorage.setItem("favoritesBag", JSON.stringify(favBag));
 }
 
-export async function checkIfFav() {
-  const allMovies = await fetchApiSquareEyes();
+export function isFavorite(movieId) {
   const currentFavBag = getExistingFavInv();
 
-  const movieProductExists = currentFavBag.find(function (bag) {
-    return bag.id === id;
-  });
-  // Checks if there is any favorites in the api data already
-  allMovies.forEach(movie => {
-    if (movie.favorite && movieProductExists === undefined) {
-      console.log(`${movie.title} is fav`);
-      currentFavBag.push(movie);
-      saveFavBag(currentFavBag);
-    }
-  });
+  if (!Array.isArray(currentFavBag)) {
+    console.error("Favorites bag is not an array:", currentFavBag);
+    return false;
+  }
 
+  return currentFavBag.some((bag) => String(bag.id) === String(movieId));
 }
 
+function getMovieDataFromButton(button) {
+  const id = button.dataset.id;
+  const title = button.dataset.title || "";
+  const imageUrl = button.dataset.image || "";
+  const imageAlt = button.dataset.imageAlt || title || "Movie poster";
+  const genre = button.dataset.genre || "";
+  const price = button.dataset.price || "";
+  const discountedPrice = button.dataset.discountedprice || "";
+  const released = button.dataset.released || "";
+  const rating = button.dataset.rating || "";
+  const index = button.dataset.index || "";
 
-checkIfFav();
+  return {
+    id,
+    title,
+    image: {
+      url: imageUrl,
+      alt: imageAlt,
+    },
+    genre,
+    price,
+    discountedPrice,
+    released,
+    rating,
+    index,
+    favorite: true,
+  };
+}
+
+export function handleClickFav(event) {
+  const button = event.currentTarget;
+
+  if (!button) {
+    console.error("No favorite button found.");
+    return;
+  }
+
+  const currentFavBag = getExistingFavInv();
+
+  if (!Array.isArray(currentFavBag)) {
+    console.error("Favorites bag is not an array:", currentFavBag);
+    return;
+  }
+
+  const movieProduct = getMovieDataFromButton(button);
+
+  if (!movieProduct.id) {
+    console.error("Favorite button is missing data-id.");
+    return;
+  }
+
+  const movieProductExists = currentFavBag.find(
+    (bag) => String(bag.id) === String(movieProduct.id),
+  );
+
+  if (!movieProductExists) {
+    currentFavBag.push(movieProduct);
+    saveFavBag(currentFavBag);
+
+    button.classList.remove("icon_heart");
+    button.classList.add("icon_heart_checked");
+  } else {
+    const newFavMovie = currentFavBag.filter(
+      (bag) => String(bag.id) !== String(movieProduct.id),
+    );
+
+    saveFavBag(newFavMovie);
+
+    button.classList.remove("icon_heart_checked");
+    button.classList.add("icon_heart");
+  }
+}
